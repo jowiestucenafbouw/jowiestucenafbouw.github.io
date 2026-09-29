@@ -1,804 +1,899 @@
 <!DOCTYPE html>
 <html lang="nl" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jowie Stuc en Afbouw | Luxe Stukadoors- en Totaalrenovatie</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        gold: {
-                            50: '#fbf8f3',
-                            100: '#f3ebd9',
-                            200: '#e5d3b3',
-                            300: '#d5b784',
-                            400: '#c8a97e', // Primary luxury accent
-                            500: '#b08b58',
-                            600: '#946f43',
-                            700: '#785734',
-                            800: '#63472d',
-                            900: '#533c28',
-                        },
-                        darkBg: '#0f1115',
-                        darkCard: '#181b22',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0f1115;
-            color: #e2e8f0;
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f1115;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #374151;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #c8a97e;
-        }
-    </style>
-</head>
-<body class="bg-darkBg text-slate-100 antialiased selection:bg-gold-400 selection:text-darkBg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jowie Stuc en Afbouw - Vakkundig stucwerk, decorative plastering en wandafwerking in Almere en omgeving." />
+  <title>Jowie Stuc en Afbouw | Vakkundig Stucwerk & Afbouw</title>
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
 
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-darkBg font-bold text-xl shadow-lg shadow-gold-400/20 group-hover:scale-105 transition-transform">
-                    JS
-                </div>
-                <div>
-                    <span class="text-xl font-bold tracking-tight text-white block">JOWIE <span class="text-gold-400">STUC</span></span>
-                    <span class="text-xs tracking-widest text-slate-400 uppercase font-medium" data-i18n="sub_brand">En Afbouw</span>
-                </div>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brandDark: "#121212",
+            brandCard: "#1a1a1a",
+            brandCardHover: "#242424",
+            sand: "#c8a97e",
+            sandLight: "#dfc4a0",
+            warm: "#f7f5f0",
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #dfc4a0 0%, #c8a97e 50%, #9a7b51 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* Hide scrollbar for carousel horizontal overflow */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body class="bg-brandDark text-gray-100 antialiased selection:bg-sand selection:text-black min-h-screen flex flex-col justify-between">
+
+  <!-- ================= HEADER ================= -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-brandDark/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="h-24 flex items-center justify-between">
+
+        <!-- Logo & Branding -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <div class="w-14 h-14 rounded-xl overflow-hidden border border-sand/30 bg-black flex items-center justify-center shadow-lg group-hover:border-sand transition">
+            <img 
+              src="assets/logo.jpeg" 
+              alt="Jowie Stuc en Afbouw Logo" 
+              class="w-full h-full object-cover" 
+              onerror="this.onerror=null; this.src='https://placehold.co/100x100/121212/c8a97e?text=JOWIE';" 
+            />
+          </div>
+          <div>
+            <div class="font-bold text-xl tracking-wider text-white">JOWIE</div>
+            <div class="text-[11px] text-sand font-medium tracking-widest uppercase">STUC EN AFBOUW</div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+          <a href="#services" class="hover:text-sand transition" data-i18n="navServices">Diensten</a>
+          <a href="#gallery" class="hover:text-sand transition" data-i18n="navGallery">Projecten</a>
+          <a href="#about" class="hover:text-sand transition" data-i18n="navAbout">Over Ons</a>
+          <a href="#reviews" class="hover:text-sand transition" data-i18n="navReviews">Reviews</a>
+          <a href="#contact" class="hover:text-sand transition" data-i18n="navContact">Contact</a>
+        </nav>
+
+        <!-- Right Side: Language Dropdown & Direct Call Button -->
+        <div class="hidden sm:flex items-center gap-4">
+          <!-- Language Selector -->
+          <div class="relative">
+            <select id="langSelect" onchange="switchLanguage(this.value)" class="bg-brandCard text-sand border border-sand/30 hover:border-sand rounded-xl px-3 py-2 text-xs font-bold uppercase cursor-pointer focus:outline-none focus:ring-1 focus:ring-sand transition">
+              <option value="nl" class="bg-brandDark text-white">🇳🇱 NL</option>
+              <option value="en" class="bg-brandDark text-white">🇬🇧 EN</option>
+            </select>
+          </div>
+
+          <!-- Call Button Desktop -->
+          <a
+            href="tel:+31682902107"
+            class="inline-flex items-center gap-2 bg-sand text-brandDark px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-sandLight transition shadow-lg shadow-sand/10"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.52l.58 2.32a2 2 0 01-.57 1.9L8 10a16 16 0 006 6l1.26-1.23a2 2 0 011.9-.57l2.32.58A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/></svg>
+            <span data-i18n="callDirect">Bel Direct</span>
+          </a>
+        </div>
+
+        <!-- Mobile Controls (Language & Hamburger) -->
+        <div class="flex items-center gap-2 md:hidden">
+          <select id="mobileLangSelect" onchange="switchLanguage(this.value)" class="bg-brandCard text-sand border border-sand/30 rounded-lg px-2.5 py-1.5 text-xs font-bold uppercase focus:outline-none">
+            <option value="nl">🇳🇱 NL</option>
+            <option value="en">🇬🇧 EN</option>
+          </select>
+
+          <button
+            id="menuButton"
+            onclick="toggleMobileMenu()"
+            class="p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-200 hover:bg-white/10 transition"
+            aria-label="Open menu"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <nav id="mobileMenu" class="hidden md:hidden pb-6 border-t border-white/10 pt-4 bg-brandDark/95 rounded-b-2xl shadow-2xl">
+        <div class="flex flex-col gap-3 text-base font-medium px-2">
+          <a href="#services" onclick="toggleMobileMenu()" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 hover:text-sand transition" data-i18n="navServices">Diensten</a>
+          <a href="#gallery" onclick="toggleMobileMenu()" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 hover:text-sand transition" data-i18n="navGallery">Projecten</a>
+          <a href="#about" onclick="toggleMobileMenu()" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 hover:text-sand transition" data-i18n="navAbout">Over Ons</a>
+          <a href="#reviews" onclick="toggleMobileMenu()" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 hover:text-sand transition" data-i18n="navReviews">Reviews</a>
+          <a href="#contact" onclick="toggleMobileMenu()" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 hover:text-sand transition" data-i18n="navContact">Contact</a>
+          <a href="tel:+31682902107" class="mt-2 bg-sand text-brandDark px-4 py-3 rounded-xl font-bold text-center shadow-md">
+            +31 6 82902107
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <main>
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+      <!-- Background work image with dark gradient overlay -->
+      <div
+        class="absolute inset-0 bg-cover bg-center opacity-30 scale-105"
+        style="background-image: url('assets/Work_1.jpeg');"
+        onerror="this.style.backgroundImage='url(https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80)';"
+      ></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/90 to-brandDark/70"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(200,169,126,0.15),transparent_50%)]"></div>
+
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full">
+        <div class="max-w-3xl">
+
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sand/10 border border-sand/30 text-sand text-xs sm:text-sm font-medium mb-8 backdrop-blur-sm">
+            <span class="w-2 h-2 rounded-full bg-sand animate-ping"></span>
+            <span data-i18n="heroBadge">Vakkundig Stucwerk & Afbouw</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight sm:leading-none">
+            <span data-i18n="heroTitle1">Strakke muren.</span> <br/>
+            <span class="gold-gradient-text" data-i18n="heroTitle2">Perfecte afwerking.</span>
+          </h1>
+
+          <p class="mt-6 text-base sm:text-xl text-gray-300 leading-relaxed font-light max-w-2xl" data-i18n="heroSubtitle">
+            Specialist in hoogwaardig stucwerk, sierpleister en wandafwerking. Met oog voor detail, schone werkwijze en duurzaam resultaat voor uw woning of bedrijfspand.
+          </p>
+
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center bg-sand text-brandDark px-8 py-4 rounded-xl font-bold hover:bg-sandLight transition shadow-xl shadow-sand/25 text-base"
+              data-i18n="heroCtaContact"
+            >
+              Direct Contact
             </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#services" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors" data-i18n="nav_services">Diensten</a>
-                <a href="#showcase" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors" data-i18n="nav_showcase">Vakwerk (33)</a>
-                <a href="#about" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors" data-i18n="nav_about">Over Ons</a>
-                <a href="#reviews" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors" data-i18n="nav_reviews">Reviews</a>
-            </nav>
+            <a
+              href="#gallery"
+              class="inline-flex items-center justify-center border border-white/20 bg-white/5 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition text-base"
+              data-i18n="heroCtaGallery"
+            >
+              Bekijk Ons Werk
+            </a>
+          </div>
 
-            <!-- Actions & Language Switcher -->
-            <div class="hidden md:flex items-center space-x-4">
-                <!-- Language Dropdown -->
-                <div class="relative">
-                    <button id="langToggleBtn" onclick="toggleLangDropdown()" class="flex items-center space-x-2 bg-darkCard border border-slate-700 hover:border-gold-400 px-3 py-1.5 rounded-lg text-sm text-slate-200 transition-colors focus:outline-none">
-                        <span id="currentLangFlag">🇳🇱</span>
-                        <span id="currentLangText" class="font-medium">NL</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute right-0 mt-2 w-32 bg-darkCard border border-slate-700 rounded-lg shadow-xl overflow-hidden z-50">
-                        <button onclick="setLanguage('nl')" class="w-full text-left px-4 py-2 text-sm text-slate-300 hover:bg-gold-400/10 hover:text-gold-400 flex items-center space-x-2 transition-colors">
-                            <span>🇳🇱</span> <span class="font-medium">Nederlands</span>
-                        </button>
-                        <button onclick="setLanguage('en')" class="w-full text-left px-4 py-2 text-sm text-slate-300 hover:bg-gold-400/10 hover:text-gold-400 flex items-center space-x-2 transition-colors">
-                            <span>🇬🇧</span> <span class="font-medium">English</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Call Button -->
-                <a href="tel:+31600000000" class="bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-300 hover:to-gold-400 text-darkBg font-semibold px-4 py-2 rounded-lg text-sm shadow-md transition-all flex items-center space-x-2">
-                    <i class="fa-solid fa-phone"></i>
-                    <span data-i18n="btn_call">Direct Bellen</span>
-                </a>
+          <!-- Trust Badges -->
+          <div class="mt-14 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-gray-300">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-sand/20 text-sand flex items-center justify-center font-bold">✓</div>
+              <span class="font-medium" data-i18n="badge1">Vakkundig Vakmanschap</span>
             </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="flex md:hidden items-center space-x-3">
-                <div class="relative">
-                    <button onclick="toggleLangDropdownMobile()" class="flex items-center space-x-1 bg-darkCard border border-slate-700 px-2.5 py-1.5 rounded-lg text-xs text-slate-200">
-                        <span id="currentLangFlagMob">🇳🇱</span>
-                        <span id="currentLangTextMob">NL</span>
-                    </button>
-                    <div id="langDropdownMobile" class="hidden absolute right-0 mt-2 w-28 bg-darkCard border border-slate-700 rounded-lg shadow-xl overflow-hidden z-50">
-                        <button onclick="setLanguage('nl')" class="w-full text-left px-3 py-2 text-xs text-slate-300">🇳🇱 NL</button>
-                        <button onclick="setLanguage('en')" class="w-full text-left px-3 py-2 text-xs text-slate-300">🇬🇧 EN</button>
-                    </div>
-                </div>
-                <button onclick="toggleMobileMenu()" class="text-slate-300 hover:text-white p-2 focus:outline-none">
-                    <i id="mobileMenuIcon" class="fa-solid fa-bars text-xl"></i>
-                </button>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-sand/20 text-sand flex items-center justify-center font-bold">✓</div>
+              <span class="font-medium" data-i18n="badge2">Schoon & Nauwkeurig</span>
             </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-sand/20 text-sand flex items-center justify-center font-bold">✓</div>
+              <span class="font-medium" data-i18n="badge3">Vrijblijvende Prijsopgave</span>
+            </div>
+          </div>
+
         </div>
-
-        <!-- Mobile Menu Drawer -->
-        <div id="mobileMenu" class="hidden md:hidden bg-darkCard border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
-            <a href="#services" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-gold-400 font-medium py-1.5" data-i18n="nav_services">Diensten</a>
-            <a href="#showcase" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-gold-400 font-medium py-1.5" data-i18n="nav_showcase">Vakwerk (33)</a>
-            <a href="#about" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-gold-400 font-medium py-1.5" data-i18n="nav_about">Over Ons</a>
-            <a href="#reviews" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-gold-400 font-medium py-1.5" data-i18n="nav_reviews">Reviews</a>
-            <div class="pt-2">
-                <a href="tel:+31600000000" class="w-full bg-gold-400 text-darkBg font-semibold py-2.5 rounded-lg flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-phone"></i>
-                    <span data-i18n="btn_call">Direct Bellen</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-        <!-- Background decorative glow -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold-400/10 blur-[120px] rounded-full pointer-events-none"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center space-x-2 bg-gold-400/10 border border-gold-400/30 px-3 py-1.5 rounded-full text-gold-400 text-xs sm:text-sm font-medium">
-                        <i class="fa-solid fa-award"></i>
-                        <span data-i18n="hero_badge">Meesterstukadoors & Totaalrenovatie</span>
-                    </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                        <span data-i18n="hero_title_1">Perfect stucwerk en</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-500" data-i18n="hero_title_2">complete binnenafbouw</span>
-                    </h1>
-                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0" data-i18n="hero_desc">
-                        Van superstrak pleisterwerk en glad spuitwerk tot complete interieurrenovaties, tegelzetwerk en scheidingswanden. Wij transformeren uw woning met ongeëvenaarde precisie en vakmanschap.
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
-                        <a href="#showcase" class="w-full sm:w-auto bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-300 hover:to-gold-400 text-darkBg font-bold px-8 py-3.5 rounded-xl shadow-lg shadow-gold-400/25 transition-all text-center flex items-center justify-center space-x-2">
-                            <span data-i18n="hero_cta_work">Bekijk Ons Vakwerk (33)</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="https://wa.me/31600000000" target="_blank" class="w-full sm:w-auto bg-darkCard border border-slate-700 hover:border-gold-400 text-slate-200 hover:text-white font-semibold px-8 py-3.5 rounded-xl transition-all text-center flex items-center justify-center space-x-2">
-                            <i class="fa-brands fa-whatsapp text-green-400 text-lg"></i>
-                            <span data-i18n="hero_cta_wa">WhatsApp Direct</span>
-                        </a>
-                    </div>
-                    <!-- Trust metrics -->
-                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-800 max-w-lg mx-auto lg:mx-0">
-                        <div>
-                            <div class="text-2xl sm:text-3xl font-bold text-white">15+</div>
-                            <div class="text-xs sm:text-sm text-slate-400" data-i18n="stat_exp">Jaar Ervaring</div>
-                        </div>
-                        <div>
-                            <div class="text-2xl sm:text-3xl font-bold text-gold-400">100%</div>
-                            <div class="text-xs sm:text-sm text-slate-400" data-i18n="stat_sat">Tevreden Klanten</div>
-                        </div>
-                        <div>
-                            <div class="text-2xl sm:text-3xl font-bold text-white">5.0★</div>
-                            <div class="text-xs sm:text-sm text-slate-400" data-i18n="stat_rev">Gemiddelde Review</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hero Visual Card / Showcase preview -->
-                <div class="lg:col-span-5">
-                    <div class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-darkCard group">
-                        <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent z-10 opacity-60"></div>
-                        <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=800&q=80" alt="Luxe Stucwerk" class="w-full h-[400px] sm:h-[450px] object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/600x450/181b22/c8a97e?text=Jowie+Stuc'">
-                        <div class="absolute bottom-6 left-6 right-6 z-20 space-y-2">
-                            <span class="bg-gold-400 text-darkBg text-xs font-bold px-2.5 py-1 rounded-md uppercase tracking-wider" data-i18n="hero_card_tag">Vakmanschap</span>
-                            <h3 class="text-xl font-bold text-white" data-i18n="hero_card_title">Strak Pleisterwerk & Moderne Wandafwerking</h3>
-                            <p class="text-xs text-slate-300" data-i18n="hero_card_desc">Elke hoek kaarsrecht, elk oppervlak zijdeglad afgewerkt voor een luxueus interieur.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <section id="services" class="py-20 bg-darkCard/50 border-y border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span class="text-gold-400 font-semibold text-sm uppercase tracking-widest" data-i18n="services_subtitle">Onze Expertise</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="services_title">Stucwerk & Uitgebreide Totaalrenovatie</h2>
-                <p class="text-slate-400 text-base" data-i18n="services_desc">
-                    Jowie Stuc en Afbouw is uw betrouwbare partner voor niet alleen al uw stucwerk, maar ook voor een brede waaier aan vakkundige renovatiewerkzaamheden in en rondom het huis.
-                </p>
-            </div>
 
-            <!-- Grid of Services -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-darkCard border border-slate-800 p-8 rounded-2xl hover:border-gold-400/50 transition-all group">
-                    <div class="w-14 h-14 rounded-xl bg-gold-400/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-400 group-hover:text-darkBg transition-colors">
-                        <i class="fa-solid fa-paint-roller"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="serv_1_title">Pleisterwerk & Sausklaar</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="serv_1_desc">
-                        Het aanbrengen van hoogwaardig pleisterwerk voor een spiegelgladde, sausklaar of behangklaar resultaat op muren en plafonds.
-                    </p>
-                </div>
+    <!-- ================= SERVICES SECTION ================= -->
+    <section id="services" class="py-24 bg-brandCard/50 border-t border-b border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
-                <!-- Service 2 -->
-                <div class="bg-darkCard border border-slate-800 p-8 rounded-2xl hover:border-gold-400/50 transition-all group">
-                    <div class="w-14 h-14 rounded-xl bg-gold-400/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-400 group-hover:text-darkBg transition-colors">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="serv_2_title">Spackspuiten & Latex</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="serv_2_desc">
-                        Machinaal spuitwerk voor een strakke korrelstructuur of spierwit latex spuitwerk voor een egale, moderne afwerking van grote oppervlakken.
-                    </p>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="bg-darkCard border border-slate-800 p-8 rounded-2xl hover:border-gold-400/50 transition-all group">
-                    <div class="w-14 h-14 rounded-xl bg-gold-400/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-400 group-hover:text-darkBg transition-colors">
-                        <i class="fa-solid fa-layer-group"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="serv_3_title">Sierpleister & Betonlook</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="serv_3_desc">
-                        Exclusieve wandafwerkingen zoals betonstuc, tadelakt of spachtelputz voor een unieke en luxueuze uitstraling in uw woonkamer of badkamer.
-                    </p>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="bg-darkCard border border-slate-800 p-8 rounded-2xl hover:border-gold-400/50 transition-all group">
-                    <div class="w-14 h-14 rounded-xl bg-gold-400/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-400 group-hover:text-darkBg transition-colors">
-                        <i class="fa-solid fa-house-chimney-crack"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="serv_4_title">Binnenwanden & Gipsplaten</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="serv_4_desc">
-                        Het plaatsen van metalstud of houten scheidingswanden, voorzetwanden en systeemplafonds voor een nieuwe indeling van uw woning.
-                    </p>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="bg-darkCard border border-slate-800 p-8 rounded-2xl hover:border-gold-400/50 transition-all group">
-                    <div class="w-14 h-14 rounded-xl bg-gold-400/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-400 group-hover:text-darkBg transition-colors">
-                        <i class="fa-solid fa-trowel-bricks"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="serv_5_title">Tegelwerk & Badkamers</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="serv_5_desc">
-                        Precisie tegelzetten voor vloeren, keukens, toiletten en complete badkamerrenovaties met oog voor detail en perfecte uitlijning.
-                    </p>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="bg-darkCard border border-slate-800 p-8 rounded-2xl hover:border-gold-400/50 transition-all group">
-                    <div class="w-14 h-14 rounded-xl bg-gold-400/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-400 group-hover:text-darkBg transition-colors">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="serv_6_title">Totale Interieurrenovatie</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="serv_6_desc">
-                        Volledige coördinatie en uitvoering van sloop, elektravoorbereiding, vloervoorbereiding en schilderwerk voor een zorgeloze verbouwing.
-                    </p>
-                </div>
-            </div>
+        <div class="max-w-2xl mb-16">
+          <span class="text-sand font-semibold text-sm uppercase tracking-widest" data-i18n="servicesSubtitle">
+            Onze Diensten
+          </span>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="servicesTitle">
+            Kwaliteitsoppervlakken voor elke ruimte
+          </h2>
+          <p class="mt-4 text-gray-400 text-base sm:text-lg" data-i18n="servicesDesc">
+            Van gladde moderne wanden tot karakteristieke sierpleisters, wij leveren professionele oplossingen op maat.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+          <!-- Service 1 -->
+          <article class="bg-brandCard rounded-2xl p-8 border border-white/10 hover:border-sand/50 transition-all duration-300 group shadow-xl flex flex-col justify-between">
+            <div>
+              <div class="w-16 h-16 rounded-xl bg-sand/10 border border-sand/20 text-sand flex items-center justify-center mb-7 group-hover:bg-sand group-hover:text-brandDark transition-all duration-300">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 20h16M6 16l4-12h4l4 12M8 12h8"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white group-hover:text-sand transition" data-i18n="service1Title">
+                Stucwerk
+              </h3>
+              <p class="mt-4 text-gray-400 leading-relaxed text-sm sm:text-base" data-i18n="service1Desc">
+                Gladde en strakke wand- en plafondafwerkingen voor zowel nieuwbouw, renovaties als complete transformaties.
+              </p>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-2 mt-7 font-semibold text-sand hover:text-white transition text-sm">
+              <span data-i18n="moreInfo">Meer informatie</span> <span>→</span>
+            </a>
+          </article>
+
+          <!-- Service 2 -->
+          <article class="bg-brandCard rounded-2xl p-8 border border-white/10 hover:border-sand/50 transition-all duration-300 group shadow-xl flex flex-col justify-between">
+            <div>
+              <div class="w-16 h-16 rounded-xl bg-sand/10 border border-sand/20 text-sand flex items-center justify-center mb-7 group-hover:bg-sand group-hover:text-brandDark transition-all duration-300">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 19c4-1 7-4 8-8l1-4 5-2-2 5-4 1c-1 4-4 7-8 8z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white group-hover:text-sand transition" data-i18n="service2Title">
+                Sierpleister & Afbouw
+              </h3>
+              <p class="mt-4 text-gray-400 leading-relaxed text-sm sm:text-base" data-i18n="service2Desc">
+                Karakteristieke structuren en decoratieve wandtechnieken die sfeer, diepte en een unieke uitstraling geven.
+              </p>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-2 mt-7 font-semibold text-sand hover:text-white transition text-sm">
+              <span data-i18n="moreInfo">Meer informatie</span> <span>→</span>
+            </a>
+          </article>
+
+          <!-- Service 3 -->
+          <article class="bg-brandCard rounded-2xl p-8 border border-white/10 hover:border-sand/50 transition-all duration-300 group shadow-xl flex flex-col justify-between">
+            <div>
+              <div class="w-16 h-16 rounded-xl bg-sand/10 border border-sand/20 text-sand flex items-center justify-center mb-7 group-hover:bg-sand group-hover:text-brandDark transition-all duration-300">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 17l4-4 3 3 5-7 4 4M4 20h16"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white group-hover:text-sand transition" data-i18n="service3Title">
+                Wandafwerking
+              </h3>
+              <p class="mt-4 text-gray-400 leading-relaxed text-sm sm:text-base" data-i18n="service3Desc">
+                Grondige voorbereiding en perfecte eindafwerking voor schilderwerk, behang of sausklaar resultaat.
+              </p>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-2 mt-7 font-semibold text-sand hover:text-white transition text-sm">
+              <span data-i18n="moreInfo">Meer informatie</span> <span>→</span>
+            </a>
+          </article>
+
+        </div>
+      </div>
     </section>
 
-    <section id="showcase" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div class="space-y-3">
-                    <span class="text-gold-400 font-semibold text-sm uppercase tracking-widest" data-i18n="showcase_subtitle">Portfolio & Projecten</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="showcase_title">33 Stuks Exclusief Vakwerk</h2>
-                    <p class="text-slate-400 text-base max-w-2xl" data-i18n="showcase_desc">
-                        Blader door onze uitgebreide selectie van 33 opgeleverde projecten variërend van strak pleisterwerk tot complete luxe woningrenovaties.
-                    </p>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="py-24 bg-brandDark relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <div class="relative">
+            <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-brandCard">
+              <img 
+                src="assets/Work_2.jpeg" 
+                alt="Jowie Stuc en Afbouw project in uitvoering" 
+                class="w-full h-full object-cover hover:scale-105 transition duration-700"
+                onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80'"
+              />
+            </div>
+            <div class="absolute -bottom-6 -right-6 bg-brandCard border border-sand/30 p-6 rounded-2xl shadow-2xl hidden sm:block max-w-xs">
+              <div class="text-sand font-bold text-3xl mb-1">100%</div>
+              <div class="text-gray-300 text-sm" data-i18n="aboutBadgeText">Vakkundige tevredenheid en oog voor elk detail.</div>
+            </div>
+          </div>
+
+          <div>
+            <span class="text-sand font-semibold text-sm uppercase tracking-widest" data-i18n="aboutSubtitle">
+              Over Jowie Stuc en Afbouw
+            </span>
+            <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="aboutTitle">
+              Vakkundig stucwerk met passie voor het vak
+            </h2>
+            <p class="mt-5 text-gray-300 leading-relaxed text-base sm:text-lg" data-i18n="aboutDesc">
+              Bij Jowie Stuc en Afbouw draait alles om kwaliteit, betrouwbaarheid en precisie. Of het nu gaat om een complete woningrenovatie of een enkele wand, wij zorgen ervoor dat uw muren strakker dan ooit worden opgeleverd.
+            </p>
+            
+            <div class="mt-8 space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-6 h-6 rounded-full bg-sand/20 text-sand flex items-center justify-center shrink-0 mt-1">✓</div>
+                <div>
+                  <h4 class="font-bold text-white" data-i18n="aboutFeat1Title">Eerlijk advies</h4>
+                  <p class="text-sm text-gray-400 mt-0.5" data-i18n="aboutFeat1Desc">Duidelijke communicatie vooraf en geen onverwachte kosten.</p>
                 </div>
-                <div class="mt-6 md:mt-0 flex items-center space-x-3">
-                    <button onclick="prevShowcaseSlide()" class="w-12 h-12 rounded-xl bg-darkCard border border-slate-700 hover:border-gold-400 text-slate-300 hover:text-gold-400 flex items-center justify-center transition-colors">
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </button>
-                    <button onclick="nextShowcaseSlide()" class="w-12 h-12 rounded-xl bg-darkCard border border-slate-700 hover:border-gold-400 text-slate-300 hover:text-gold-400 flex items-center justify-center transition-colors">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-6 h-6 rounded-full bg-sand/20 text-sand flex items-center justify-center shrink-0 mt-1">✓</div>
+                <div>
+                  <h4 class="font-bold text-white" data-i18n="aboutFeat2Title">Schone oplevering</h4>
+                  <p class="text-sm text-gray-400 mt-0.5" data-i18n="aboutFeat2Desc">Wij werken uiterst nauwkeurig en ruimen alles netjes op na afloop.</p>
                 </div>
+              </div>
             </div>
 
-            <!-- Carousel / Grid View of 33 Items -->
-            <div class="relative overflow-hidden">
-                <div id="showcaseSlider" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500">
-                    <!-- Dynamically populated via JS to show all 33 items efficiently -->
-                </div>
+            <div class="mt-10">
+              <a href="#contact" class="inline-flex items-center gap-3 bg-sand text-brandDark px-7 py-3.5 rounded-xl font-bold hover:bg-sandLight transition shadow-lg" data-i18n="contactUs">
+                Neem Contact Op
+              </a>
             </div>
+          </div>
 
-            <!-- Pagination info / load more controller -->
-            <div class="mt-12 text-center flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <span id="showcaseCounter" class="text-slate-400 text-sm">Toont alle 33 projecten</span>
-                <button onclick="toggleAllShowcaseItems()" id="showcaseToggleBtn" class="bg-darkCard border border-slate-700 hover:border-gold-400 text-slate-200 px-6 py-2.5 rounded-xl text-sm font-medium transition-colors">
-                    <span data-i18n="btn_view_grid">Toon als volledig overzicht</span>
-                </button>
-            </div>
         </div>
+      </div>
     </section>
 
-    <!-- Lightbox Modal -->
-    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
-        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-slate-400 hover:text-white text-3xl focus:outline-none">
-            <i class="fa-solid fa-xmark"></i>
+
+    <!-- ================= DYNAMIC PROJECTS & GALLERY SECTION ================= -->
+    <section id="gallery" class="py-24 bg-brandCard/30 border-t border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+          <div>
+            <span class="text-sand font-semibold text-sm uppercase tracking-widest" data-i18n="projectsSubtitle">
+              Gerealiseerde Projecten
+            </span>
+            <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="projectsTitle">
+              Bekijk ons werk in detail
+            </h2>
+          </div>
+          <p class="text-gray-400 max-w-md text-base" data-i18n="projectsDesc">
+            Swipe door de projecten-carousel of bekijk de volledige galerij. Klik op een afbeelding voor vergroting.
+          </p>
+        </div>
+
+        <!-- Carousel Slider Banner -->
+        <div class="relative bg-brandCard rounded-3xl p-4 sm:p-6 border border-white/10 shadow-2xl mb-12">
+          <div class="flex items-center justify-between mb-4 px-2">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-sand inline-block"></span>
+              <span data-i18n="carouselHeader">Project Highlight Carousel</span>
+            </h3>
+            <div class="flex items-center gap-2">
+              <button onclick="scrollCarousel(-1)" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-sand hover:text-brandDark text-white border border-white/10 flex items-center justify-center transition" aria-label="Previous image">
+                ‹
+              </button>
+              <button onclick="scrollCarousel(1)" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-sand hover:text-brandDark text-white border border-white/10 flex items-center justify-center transition" aria-label="Next image">
+                ›
+              </button>
+            </div>
+          </div>
+
+          <!-- Carousel Container -->
+          <div id="projectCarousel" class="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar py-2 px-1">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+
+        <!-- Full Gallery Grid Header -->
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-xl font-bold text-white" data-i18n="fullGalleryTitle">Volledige Fotogalerij (33+ Afbeeldingen)</h3>
+          <span class="text-xs text-sand font-mono bg-sand/10 border border-sand/20 px-3 py-1 rounded-full" id="imageCounter">33 Images</span>
+        </div>
+
+        <!-- Dynamic Grid Container (Renders Work_1 to Work_33 dynamically) -->
+        <div id="galleryGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
+          <!-- Dynamically generated Work_xx items via JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= LIGHTBOX MODAL ================= -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-xl flex flex-col justify-between p-4 sm:p-8">
+      <!-- Lightbox Header -->
+      <div class="flex items-center justify-between max-w-6xl w-full mx-auto">
+        <div class="text-white font-semibold text-sm sm:text-base">
+          <span id="lightboxIndex" class="text-sand font-bold">1</span> / <span id="lightboxTotal">33</span> - Jowie Stuc Project
+        </div>
+        <button onclick="closeLightbox()" class="text-gray-400 hover:text-white bg-white/10 p-2.5 rounded-xl border border-white/10 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
-        <div class="max-w-4xl w-full bg-darkCard border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
-            <div class="relative h-[60vh] bg-black flex items-center justify-center">
-                <img id="lightboxImg" src="" alt="Showcase Item" class="max-h-full max-w-full object-contain">
-            </div>
-            <div class="p-6 space-y-2">
-                <div id="lightboxCategory" class="text-gold-400 text-xs font-bold uppercase tracking-widest">Stucwerk</div>
-                <h3 id="lightboxTitle" class="text-xl font-bold text-white">Project Titel</h3>
-                <p id="lightboxDesc" class="text-slate-400 text-sm">Gedetailleerde beschrijving van het uitgevoerde stuc- en afbouwwerk.</p>
-            </div>
-        </div>
+      </div>
+
+      <!-- Lightbox Main Image & Navigation -->
+      <div class="relative max-w-5xl w-full mx-auto my-auto flex items-center justify-center group">
+        <button onclick="prevLightboxImage()" class="absolute left-2 sm:-left-12 z-10 p-3 rounded-full bg-brandDark/80 hover:bg-sand hover:text-brandDark border border-white/20 text-white transition shadow-2xl">
+          ‹
+        </button>
+        
+        <img id="lightboxImg" src="" alt="Enlarged project view" class="max-h-[75vh] w-auto max-w-full rounded-2xl object-contain border border-white/10 shadow-2xl" />
+
+        <button onclick="nextLightboxImage()" class="absolute right-2 sm:-right-12 z-10 p-3 rounded-full bg-brandDark/80 hover:bg-sand hover:text-brandDark border border-white/20 text-white transition shadow-2xl">
+          ›
+        </button>
+      </div>
+
+      <!-- Lightbox Footer -->
+      <div class="text-center max-w-xl mx-auto py-2 text-xs sm:text-sm text-gray-400">
+        <span data-i18n="lightboxHint">Gebruik de pijltjes op uw toetsenbord of swipe om te navigeren.</span>
+      </div>
     </div>
 
-    <section id="about" class="py-20 bg-darkCard/50 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-6 space-y-6">
-                    <span class="text-gold-400 font-semibold text-sm uppercase tracking-widest" data-i18n="about_subtitle">Over Jowie Stuc en Afbouw</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="about_title">Vakmanschap met passie voor perfectie</h2>
-                    <p class="text-slate-300 text-base leading-relaxed" data-i18n="about_desc1">
-                        Al meer dan 15 jaar is Jowie Stuc en Afbouw een begrip in kwalitatief stucwerk en complete interieurrenovaties. Wij geloven dat een strakke wand of een perfecte afbouw de fundering vormt van een sfeervol en luxueus thuis.
-                    </p>
-                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="about_desc2">
-                        Of het nu gaat om een moderne nieuwbouwwoning of een karakteristieke renovatie; wij werken uitsluitend met A-merk materialen, geavanceerde technieken en streven altijd naar een naadloos eindresultaat waar u jarenlang van geniet.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6 pt-4">
-                        <div class="flex items-start space-x-3">
-                            <div class="w-10 h-10 rounded-lg bg-gold-400/10 text-gold-400 flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold text-sm" data-i18n="about_feat1_title">Garantie & Kwaliteit</h4>
-                                <p class="text-slate-400 text-xs" data-i18n="about_feat1_desc">Volledige garantie op al ons stuc- en afbouwwerk.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <div class="w-10 h-10 rounded-lg bg-gold-400/10 text-gold-400 flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-broom"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold text-sm" data-i18n="about_feat2_title">Schone Oplevering</h4>
-                                <p class="text-slate-400 text-xs" data-i18n="about_feat2_desc">Wij leveren elke werkplek bezemschoon op.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-6 relative">
-                    <div class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=800&q=80" alt="Vakman aan het werk" class="w-full h-[400px] object-cover" onerror="this.src='https://placehold.co/600x400/181b22/c8a97e?text=Vakmanschap'">
-                    </div>
-                    <!-- Floating badge -->
-                    <div class="absolute -bottom-6 -left-6 bg-darkCard border border-gold-400/30 p-6 rounded-2xl shadow-xl hidden sm:block">
-                        <div class="text-3xl font-extrabold text-gold-400">15+</div>
-                        <div class="text-xs text-slate-300 font-medium" data-i18n="about_badge">Jaar Ervaring in de Bouw</div>
-                    </div>
-                </div>
-            </div>
+
+    <!-- ================= TESTIMONIALS SECTION ================= -->
+    <section id="reviews" class="py-24 bg-brandDark">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-sand font-semibold text-sm uppercase tracking-widest" data-i18n="reviewsSubtitle">
+            Klantbeoordelingen
+          </span>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="reviewsTitle">
+            Wat onze klanten zeggen
+          </h2>
+          <p class="mt-4 text-gray-400 text-base" data-i18n="reviewsDesc">
+            Ervaringen van huiseigenaren en bedrijven die kozen voor de kwaliteit van Jowie Stuc en Afbouw.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+          <blockquote class="bg-brandCard border border-white/10 rounded-2xl p-8 shadow-xl flex flex-col justify-between">
+            <div>
+              <div class="text-sand text-lg mb-4 flex gap-1">★★★★★</div>
+              <p class="text-gray-300 leading-relaxed text-sm sm:text-base" data-i18n="review1Text">
+                “Geweldig vakwerk geleverd! Onze muren zijn boterzacht en superstrak gestuct. Ook werd de hele werkruimte netjes en opgeruimd achtergelaten.”
+              </p>
+            </div>
+            <footer class="mt-8 pt-6 border-t border-white/5">
+              <div class="font-bold text-white">Michael R.</div>
+              <div class="text-xs text-sand" data-i18n="review1Loc">Woningrenovatie Almere</div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="bg-brandCard border border-white/10 rounded-2xl p-8 shadow-xl flex flex-col justify-between">
+            <div>
+              <div class="text-sand text-lg mb-4 flex gap-1">★★★★★</div>
+              <p class="text-gray-300 leading-relaxed text-sm sm:text-base" data-i18n="review2Text">
+                “Zeer betrouwbaar en professioneel. De afspraken werden perfect nagekomen en het sierpleisterwerk ziet er fantastisch uit.”
+              </p>
+            </div>
+            <footer class="mt-8 pt-6 border-t border-white/5">
+              <div class="font-bold text-white">Sophie V.</div>
+              <div class="text-xs text-sand" data-i18n="review2Loc">Interieurproject</div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="bg-brandCard border border-white/10 rounded-2xl p-8 shadow-xl flex flex-col justify-between">
+            <div>
+              <div class="text-sand text-lg mb-4 flex gap-1">★★★★★</div>
+              <p class="text-gray-300 leading-relaxed text-sm sm:text-base" data-i18n="review3Text">
+                “Duidelijke communicatie vooraf, eerlijke prijs en een prachtig strak eindresultaat. Zeker een aanrader voor al je stucwerk!”
+              </p>
+            </div>
+            <footer class="mt-8 pt-6 border-t border-white/5">
+              <div class="font-bold text-white">Daniel K.</div>
+              <div class="text-xs text-sand" data-i18n="review3Loc">Wandafwerking</div>
+            </footer>
+          </blockquote>
+
+        </div>
+      </div>
     </section>
 
-    <section id="reviews" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span class="text-gold-400 font-semibold text-sm uppercase tracking-widest" data-i18n="reviews_subtitle">Klantbeoordelingen</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="reviews_title">Wat onze klanten zeggen</h2>
-                <p class="text-slate-400 text-base" data-i18n="reviews_desc">Uw tevredenheid is onze beste referentie. Lees de ervaringen van eerdere opdrachtgevers.</p>
+
+    <!-- ================= CONTACT SECTION (Direct Action Links) ================= -->
+    <section id="contact" class="py-24 bg-brandCard/40 border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div class="max-w-3xl mx-auto text-center">
+          <span class="text-sand font-semibold text-sm uppercase tracking-widest" data-i18n="contactSubtitle">
+            Neem contact op
+          </span>
+          <h2 class="mt-3 text-3xl sm:text-5xl font-extrabold text-white tracking-tight" data-i18n="contactTitle">
+            Klaar om uw project te bespreken?
+          </h2>
+          <p class="mt-5 text-gray-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto" data-i18n="contactDesc">
+            Heeft u vragen over stucwerk, sierpleister of wandafwerking? Neem direct contact met ons op via telefoon, e-mail of WhatsApp. Wij staan voor u klaar!
+          </p>
+
+          <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+
+            <!-- Phone -->
+            <a href="tel:+31682902107" class="flex flex-col justify-between bg-brandCard p-6 rounded-2xl border border-white/10 hover:border-sand transition-all duration-300 group shadow-xl">
+              <div class="w-12 h-12 rounded-xl bg-sand/10 text-sand flex items-center justify-center font-bold mb-4 group-hover:bg-sand group-hover:text-brandDark transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.52l.58 2.32a2 2 0 01-.57 1.9L8 10a16 16 0 006 6l1.26-1.23a2 2 0 011.9-.57l2.32.58A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 font-medium uppercase tracking-wider" data-i18n="labelPhone">Telefoon</div>
+                <div class="font-bold text-white text-base group-hover:text-sand transition mt-1">+31 6 82902107</div>
+              </div>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/31682902107" target="_blank" rel="noopener noreferrer" class="flex flex-col justify-between bg-brandCard p-6 rounded-2xl border border-white/10 hover:border-sand transition-all duration-300 group shadow-xl">
+              <div class="w-12 h-12 rounded-xl bg-sand/10 text-sand flex items-center justify-center font-bold mb-4 group-hover:bg-sand group-hover:text-brandDark transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 11.5a8 8 0 01-11.9 7L4 20l1.5-4A8 8 0 1120 11.5z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 font-medium uppercase tracking-wider">WhatsApp</div>
+                <div class="font-bold text-white text-base group-hover:text-sand transition mt-1" data-i18n="clickWhatsApp">Stuur een bericht</div>
+              </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:namonamo80@hotmail.com" class="flex flex-col justify-between bg-brandCard p-6 rounded-2xl border border-white/10 hover:border-sand transition-all duration-300 group shadow-xl sm:col-span-1">
+              <div class="w-12 h-12 rounded-xl bg-sand/10 text-sand flex items-center justify-center font-bold mb-4 group-hover:bg-sand group-hover:text-brandDark transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div class="overflow-hidden">
+                <div class="text-xs text-gray-400 font-medium uppercase tracking-wider" data-i18n="labelEmail">E-mailadres</div>
+                <div class="font-bold text-white text-xs sm:text-sm truncate group-hover:text-sand transition mt-1">namonamo80@hotmail.com</div>
+              </div>
+            </a>
+
+            <!-- Service Area -->
+            <div class="flex flex-col justify-between bg-brandCard p-6 rounded-2xl border border-white/10 shadow-xl">
+              <div class="w-12 h-12 rounded-xl bg-sand/10 text-sand flex items-center justify-center font-bold mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21s7-5.4 7-12a7 7 0 10-14 0c0 6.6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 font-medium uppercase tracking-wider" data-i18n="labelArea">Werkgebied</div>
+                <div class="font-bold text-white text-sm mt-1" data-i18n="valArea">Almere & omstreken</div>
+              </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Review 1 -->
-                <div class="bg-darkCard border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex text-gold-400 space-x-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-300 text-sm leading-relaxed" data-i18n="rev_1_text">
-                            "Jowie heeft ons hele benedenhuis voorzien van strak sausklaar stucwerk en daarna latex gespoten. Het resultaat is werkelijk adembenemend strak. Aanrader!"
-                        </p>
-                    </div>
-                    <div class="pt-6 mt-6 border-t border-slate-800/60 flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-full bg-gold-400/20 text-gold-400 font-bold flex items-center justify-center">M</div>
-                        <div>
-                            <div class="text-white font-bold text-sm">Marc de Jong</div>
-                            <div class="text-slate-400 text-xs">Amsterdam</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 2 -->
-                <div class="bg-darkCard border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex text-gold-400 space-x-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-300 text-sm leading-relaxed" data-i18n="rev_2_text">
-                            "Ze hebben niet alleen al het stucwerk gedaan, maar ook de scheidingswanden geplaatst en de badkamer betegeld. Alles in één hand en super professioneel gewerkt."
-                        </p>
-                    </div>
-                    <div class="pt-6 mt-6 border-t border-slate-800/60 flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-full bg-gold-400/20 text-gold-400 font-bold flex items-center justify-center">S</div>
-                        <div>
-                            <div class="text-white font-bold text-sm">Sophie van den Berg</div>
-                            <div class="text-slate-400 text-xs">Utrecht</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 3 -->
-                <div class="bg-darkCard border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex text-gold-400 space-x-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-300 text-sm leading-relaxed" data-i18n="rev_3_text">
-                            "Erg fijne communicatie, stipt volgens afspraak gewerkt en de woning werd super schoon achtergelaten. Dit is pas echt vakmanschap van topniveau!"
-                        </p>
-                    </div>
-                    <div class="pt-6 mt-6 border-t border-slate-800/60 flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-full bg-gold-400/20 text-gold-400 font-bold flex items-center justify-center">R</div>
-                        <div>
-                            <div class="text-white font-bold text-sm">Bram & Lisa</div>
-                            <div class="text-slate-400 text-xs">Rotterdam</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+      </div>
     </section>
 
-    <footer class="bg-darkCard border-t border-slate-800 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div class="space-y-4 md:col-span-2">
-                    <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-darkBg font-bold text-xl">
-                            JS
-                        </div>
-                        <div>
-                            <span class="text-xl font-bold tracking-tight text-white block">JOWIE <span class="text-gold-400">STUC</span></span>
-                            <span class="text-xs tracking-widest text-slate-400 uppercase font-medium" data-i18n="sub_brand">En Afbouw</span>
-                        </div>
-                    </div>
-                    <p class="text-slate-400 text-sm max-w-sm" data-i18n="footer_desc">
-                        Uw specialist voor hoogwaardig stucwerk, spackspuiten, tegelwerk en complete woningrenovaties in heel Nederland.
-                    </p>
-                </div>
-                <div class="space-y-3">
-                    <h4 class="text-white font-bold text-sm uppercase tracking-wider" data-i18n="footer_links_title">Snelle Links</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#services" class="text-slate-400 hover:text-gold-400 transition-colors" data-i18n="nav_services">Diensten</a></li>
-                        <li><a href="#showcase" class="text-slate-400 hover:text-gold-400 transition-colors" data-i18n="nav_showcase">Vakwerk (33)</a></li>
-                        <li><a href="#about" class="text-slate-400 hover:text-gold-400 transition-colors" data-i18n="nav_about">Over Ons</a></li>
-                        <li><a href="#reviews" class="text-slate-400 hover:text-gold-400 transition-colors" data-i18n="nav_reviews">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-3">
-                    <h4 class="text-white font-bold text-sm uppercase tracking-wider" data-i18n="footer_contact_title">Contact</h4>
-                    <ul class="space-y-2 text-sm text-slate-400">
-                        <li class="flex items-center space-x-2">
-                            <i class="fa-solid fa-phone text-gold-400"></i>
-                            <a href="tel:+31600000000" class="hover:text-white transition-colors">+31 6 00 00 00 00</a>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i class="fa-solid fa-envelope text-gold-400"></i>
-                            <a href="mailto:info@jowiestuc.nl" class="hover:text-white transition-colors">info@jowiestuc.nl</a>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i class="fa-solid fa-location-dot text-gold-400"></i>
-                            <span>Nederland (Heel het land)</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
-                <p>&copy; 2026 Jowie Stuc en Afbouw. <span data-i18n="footer_rights">Alle rechten voorbehouden.</span></p>
-                <div class="flex space-x-6 mt-4 sm:mt-0">
-                    <a href="#" class="hover:text-slate-400 transition-colors" data-i18n="footer_privacy">Privacybeleid</a>
-                    <a href="#" class="hover:text-slate-400 transition-colors" data-i18n="footer_terms">Algemene Voorwaarden</a>
-                </div>
-            </div>
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-black text-gray-400 border-t border-white/10 py-12">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg overflow-hidden border border-sand/30 bg-black flex items-center justify-center">
+            <img 
+              src="assets/logo.jpeg" 
+              alt="Jowie Logo" 
+              class="w-full h-full object-cover" 
+              onerror="this.onerror=null; this.src='https://placehold.co/100x100/121212/c8a97e?text=JOWIE';"
+            />
+          </div>
+          <span class="font-bold text-white tracking-wider text-lg">JOWIE <span class="text-sand text-xs block font-normal tracking-widest uppercase">STUC EN AFBOUW</span></span>
         </div>
-    </footer>
 
-    <script>
-        // Translations Dictionary (NL / EN)
-        const translations = {
-            nl: {
-                sub_brand: "En Afbouw",
-                nav_services: "Diensten",
-                nav_showcase: "Vakwerk (33)",
-                nav_about: "Over Ons",
-                nav_reviews: "Reviews",
-                btn_call: "Direct Bellen",
-                hero_badge: "Meesterstukadoors & Totaalrenovatie",
-                hero_title_1: "Perfect stucwerk en",
-                hero_title_2: "complete binnenafbouw",
-                hero_desc: "Van superstrak pleisterwerk en glad spuitwerk tot complete interieurrenovaties, tegelzetwerk en scheidingswanden. Wij transformeren uw woning met ongeëvenaarde precisie en vakmanschap.",
-                hero_cta_work: "Bekijk Ons Vakwerk (33)",
-                hero_cta_wa: "WhatsApp Direct",
-                stat_exp: "Jaar Ervaring",
-                stat_sat: "Tevreden Klanten",
-                stat_rev: "Gemiddelde Review",
-                hero_card_tag: "Vakmanschap",
-                hero_card_title: "Strak Pleisterwerk & Moderne Wandafwerking",
-                hero_card_desc: "Elke hoek kaarsrecht, elk oppervlak zijdeglad afgewerkt voor een luxueus interieur.",
-                services_subtitle: "Onze Expertise",
-                services_title: "Stucwerk & Uitgebreide Totaalrenovatie",
-                services_desc: "Jowie Stuc en Afbouw is uw betrouwbare partner voor niet alleen al uw stucwerk, maar ook voor een brede waaier aan vakkundige renovatiewerkzaamheden in en rondom het huis.",
-                serv_1_title: "Pleisterwerk & Sausklaar",
-                serv_1_desc: "Het aanbrengen van hoogwaardig pleisterwerk voor een spiegelgladde, sausklaar of behangklaar resultaat op muren en plafonds.",
-                serv_2_title: "Spackspuiten & Latex",
-                serv_2_desc: "Machinaal spuitwerk voor een strakke korrelstructuur of spierwit latex spuitwerk voor een egale, moderne afwerking van grote oppervlakken.",
-                serv_3_title: "Sierpleister & Betonlook",
-                serv_3_desc: "Exclusieve wandafwerkingen zoals betonstuc, tadelakt of spachtelputz voor een unieke en luxueuze uitstraling in uw woonkamer of badkamer.",
-                serv_4_title: "Binnenwanden & Gipsplaten",
-                serv_4_desc: "Het plaatsen van metalstud of houten scheidingswanden, voorzetwanden en systeemplafonds voor een nieuwe indeling van uw woning.",
-                serv_5_title: "Tegelwerk & Badkamers",
-                serv_5_desc: "Precisie tegelzetten voor vloeren, keukens, toiletten en complete badkamerrenovaties met oog voor detail en perfecte uitlijning.",
-                serv_6_title: "Totale Interieurrenovatie",
-                serv_6_desc: "Volledige coördinatie en uitvoering van sloop, elektravoorbereiding, vloervoorbereiding en schilderwerk voor een zorgeloze verbouwing.",
-                showcase_subtitle: "Portfolio & Projecten",
-                showcase_title: "33 Stuks Exclusief Vakwerk",
-                showcase_desc: "Blader door onze uitgebreide selectie van 33 opgeleverde projecten variërend van strak pleisterwerk tot complete luxe woningrenovaties.",
-                btn_view_grid: "Toon als volledig overzicht",
-                about_subtitle: "Over Jowie Stuc en Afbouw",
-                about_title: "Vakmanschap met passie voor perfectie",
-                about_desc1: "Al meer dan 15 jaar is Jowie Stuc en Afbouw een begrip in kwalitatief stucwerk en complete interieurrenovaties. Wij geloven dat een strakke wand of een perfecte afbouw de fundering vormt van een sfeervol en luxueus thuis.",
-                about_desc2: "Of het nu gaat om een moderne nieuwbouwwoning of een karakteristieke renovatie; wij werken uitsluitend met A-merk materialen, geavanceerde technieken en streven altijd naar een naadloos eindresultaat waar u jarenlang van geniet.",
-                about_feat1_title: "Garantie & Kwaliteit",
-                about_feat1_desc: "Volledige garantie op al ons stuc- en afbouwwerk.",
-                about_feat2_title: "Schone Oplevering",
-                about_feat2_desc: "Wij leveren elke werkplek bezemschoon op.",
-                about_badge: "Jaar Ervaring in de Bouw",
-                reviews_subtitle: "Klantbeoordelingen",
-                reviews_title: "Wat onze klanten zeggen",
-                reviews_desc: "Uw tevredenheid is onze beste referentie. Lees de ervaringen van eerdere opdrachtgevers.",
-                rev_1_text: "\"Jowie heeft ons hele benedenhuis voorzien van strak sausklaar stucwerk en daarna latex gespoten. Het resultaat is werkelijk adembenemend strak. Aanrader!\"",
-                rev_2_text: "\"Ze hebben niet alleen al het stucwerk gedaan, maar ook de scheidingswanden geplaatst en de badkamer betegeld. Alles in één hand en super professioneel gewerkt.\"",
-                rev_3_text: "\"Erg fijne communicatie, stipt volgens afspraak gewerkt en de woning werd super schoon achtergelaten. Dit is pas echt vakmanschap van topniveau!\"",
-                footer_desc: "Uw specialist voor hoogwaardig stucwerk, spackspuiten, tegelwerk en complete woningrenovaties in heel Nederland.",
-                footer_links_title: "Snelle Links",
-                footer_contact_title: "Contact",
-                footer_rights: "Alle rechten voorbehouden.",
-                footer_privacy: "Privacybeleid",
-                footer_terms: "Algemene Voorwaarden"
-            },
-            en: {
-                sub_brand: "And Interior Finishing",
-                nav_services: "Services",
-                nav_showcase: "Our Work (33)",
-                nav_about: "About Us",
-                nav_reviews: "Reviews",
-                btn_call: "Call Now",
-                hero_badge: "Master Plasterers & Total Renovation",
-                hero_title_1: "Immaculate Plastering &",
-                hero_title_2: "Complete Interior Finishing",
-                hero_desc: "From pristine plastering and smooth airless spraying to complete interior renovations, tiling, and drywall partitioning. We transform your home with unmatched precision and craftsmanship.",
-                hero_cta_work: "View Our Work (33)",
-                hero_cta_wa: "WhatsApp Direct",
-                stat_exp: "Years Experience",
-                stat_sat: "Satisfied Clients",
-                stat_rev: "Average Review",
-                hero_card_tag: "Craftsmanship",
-                hero_card_title: "Pristine Plastering & Modern Wall Finishes",
-                hero_card_desc: "Every corner perfectly straight, every surface flawlessly smooth for a luxurious interior.",
-                services_subtitle: "Our Expertise",
-                services_title: "Plastering & Comprehensive Total Renovation",
-                services_desc: "Jowie Plastering and Finishing is your trusted partner not only for all plastering work, but also for a wide range of professional renovation services in and around the home.",
-                serv_1_title: "Plastering & Paint-Ready",
-                serv_1_desc: "Applying high-quality plaster for a mirror-smooth, paint-ready or wallpaper-ready result on walls and ceilings.",
-                serv_2_title: "Airless Spraying & Latex",
-                serv_2_desc: "Mechanical spray application for a smooth texture or crisp white latex painting for an even, modern finish on large surfaces.",
-                serv_3_title: "Decorative Plaster & Concrete Look",
-                serv_3_desc: "Exclusive wall finishes such as concrete stucco, tadelakt, or decorative plaster for a unique and luxurious look in your living room or bathroom.",
-                serv_4_title: "Interior Partitions & Drywall",
-                serv_4_desc: "Installing metal stud or wooden partition walls, lining walls, and suspended ceilings for a new room layout.",
-                serv_5_title: "Tiling & Bathrooms",
-                serv_5_desc: "Precision tile setting for floors, kitchens, toilets, and complete bathroom renovations with meticulous attention to alignment.",
-                serv_6_title: "Total Interior Renovation",
-                serv_6_desc: "Full coordination and execution of demolition, electrical preparation, floor prep, and painting for a worry-free remodeling project.",
-                showcase_subtitle: "Portfolio & Projects",
-                showcase_title: "33 Exclusive Works",
-                showcase_desc: "Browse through our extensive selection of 33 completed projects ranging from sleek plasterwork to complete luxury home renovations.",
-                btn_view_grid: "Show full grid overview",
-                about_subtitle: "About Jowie Plastering & Finishing",
-                about_title: "Craftsmanship with a passion for perfection",
-                about_desc1: "For over 15 years, Jowie Stuc en Afbouw has been a household name in high-quality plastering and complete interior renovations. We believe a smooth wall or flawless finish forms the foundation of an inviting and luxurious home.",
-                about_desc2: "Whether it is a modern new-build home or a characterful renovation, we work exclusively with A-brand materials, advanced techniques, and always strive for a seamless result you will enjoy for years.",
-                about_feat1_title: "Warranty & Quality",
-                about_feat1_desc: "Full warranty on all our plastering and finishing work.",
-                about_feat2_title: "Clean Delivery",
-                about_feat2_desc: "We leave every workplace spotless upon completion.",
-                about_badge: "Years Construction Experience",
-                reviews_subtitle: "Customer Reviews",
-                reviews_title: "What our clients say",
-                reviews_desc: "Your satisfaction is our best reference. Read the experiences of previous clients.",
-                rev_1_text: "\"Jowie provided our entire ground floor with smooth paint-ready plaster and then sprayed latex. The result is truly breathtakingly smooth. Highly recommended!\"",
-                rev_2_text: "\"They not only did all the plastering, but also installed partition walls and tiled the bathroom. Everything under one roof and super professionally executed.\"",
-                rev_3_text: "\"Great communication, punctually on schedule, and the house was left spotless. This is truly top-tier craftsmanship!\"",
-                footer_desc: "Your specialist for high-quality plastering, airless spraying, tiling, and complete home renovations throughout the Netherlands.",
-                footer_links_title: "Quick Links",
-                footer_contact_title: "Contact",
-                footer_rights: "All rights reserved.",
-                footer_privacy: "Privacy Policy",
-                footer_terms: "Terms & Conditions"
-            }
-        };
+        <div class="text-xs text-gray-500 text-center md:text-right">
+          © <span id="year">2026</span> Jowie Stuc en Afbouw. All rights reserved.
+        </div>
 
-        let currentLang = 'nl';
+      </div>
+    </div>
+  </footer>
 
-        function setLanguage(lang) {
-            currentLang = lang;
-            document.getElementById('currentLangFlag').innerText = lang === 'nl' ? '🇳🇱' : '🇬🇧';
-            document.getElementById('currentLangText').innerText = lang.toUpperCase();
-            document.getElementById('currentLangFlagMob').innerText = lang === 'nl' ? '🇳🇱' : '🇬🇧';
-            document.getElementById('currentLangTextMob').innerText = lang.toUpperCase();
-            
-            // Hide dropdowns
-            document.getElementById('langDropdown').classList.add('hidden');
-            document.getElementById('langDropdownMobile').classList.add('hidden');
 
-            // Apply translation data tags
-            const elements = document.querySelectorAll('[data-i18n]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    el.innerText = translations[lang][key];
-                }
-            });
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // ----------------------------------------------------
+    // 1. Language i18n Dictionary
+    // ----------------------------------------------------
+    const i18nData = {
+      nl: {
+        navServices: "Diensten",
+        navGallery: "Projecten",
+        navAbout: "Over Ons",
+        navReviews: "Reviews",
+        navContact: "Contact",
+        callDirect: "Bel Direct",
+        heroBadge: "Vakkundig Stucwerk & Afbouw",
+        heroTitle1: "Strakke muren.",
+        heroTitle2: "Perfecte afwerking.",
+        heroSubtitle: "Specialist in hoogwaardig stucwerk, sierpleister en wandafwerking. Met oog voor detail, schone werkwijze en duurzaam resultaat voor uw woning of bedrijfspand.",
+        heroCtaContact: "Direct Contact",
+        heroCtaGallery: "Bekijk Ons Werk",
+        badge1: "Vakkundig Vakmanschap",
+        badge2: "Schoon & Nauwkeurig",
+        badge3: "Vrijblijvende Prijsopgave",
+        servicesSubtitle: "Onze Diensten",
+        servicesTitle: "Kwaliteitsoppervlakken voor elke ruimte",
+        servicesDesc: "Van gladde moderne wanden tot karakteristieke sierpleisters, wij leveren professionele oplossingen op maat.",
+        service1Title: "Stucwerk",
+        service1Desc: "Gladde en strakke wand- en plafondafwerkingen voor zowel nieuwbouw, renovaties als complete transformaties.",
+        service2Title: "Sierpleister & Afbouw",
+        service2Desc: "Karakteristieke structuren en decoratieve wandtechnieken die sfeer, diepte en een unieke uitstraling geven.",
+        service3Title: "Wandafwerking",
+        service3Desc: "Grondige voorbereiding en perfecte eindafwerking voor schilderwerk, behang of sausklaar resultaat.",
+        moreInfo: "Meer informatie",
+        aboutSubtitle: "Over Jowie Stuc en Afbouw",
+        aboutTitle: "Vakkundig stucwerk met passie voor het vak",
+        aboutDesc: "Bij Jowie Stuc en Afbouw draait alles om kwaliteit, betrouwbaarheid en precisie. Of het nu gaat om een complete woningrenovatie of een enkele wand, wij zorgen ervoor dat uw muren strakker dan ooit worden opgeleverd.",
+        aboutBadgeText: "Vakkundige tevredenheid en oog voor elk detail.",
+        aboutFeat1Title: "Eerlijk advies",
+        aboutFeat1Desc: "Duidelijke communicatie vooraf en geen onverwachte kosten.",
+        aboutFeat2Title: "Schone oplevering",
+        aboutFeat2Desc: "Wij werken uiterst nauwkeurig en ruimen alles netjes op na afloop.",
+        contactUs: "Neem Contact Op",
+        projectsSubtitle: "Gerealiseerde Projecten",
+        projectsTitle: "Bekijk ons werk in detail",
+        projectsDesc: "Swipe door de projecten-carousel of bekijk de volledige galerij. Klik op een afbeelding voor vergroting.",
+        carouselHeader: "Project Highlight Carousel",
+        fullGalleryTitle: "Volledige Fotogalerij",
+        lightboxHint: "Gebruik de pijltjes op uw toetsenbord of swipe om te navigeren.",
+        reviewsSubtitle: "Klantbeoordelingen",
+        reviewsTitle: "Wat onze klanten zeggen",
+        reviewsDesc: "Ervaringen van huiseigenaren en bedrijven die kozen voor de kwaliteit van Jowie Stuc en Afbouw.",
+        review1Text: "“Geweldig vakwerk geleverd! Onze muren zijn boterzacht en superstrak gestuct. Ook werd de hele werkruimte netjes en opgeruimd achtergelaten.”",
+        review1Loc: "Woningrenovatie Almere",
+        review2Text: "“Zeer betrouwbaar en professioneel. De afspraken werden perfect nagekomen en het sierpleisterwerk ziet er fantastisch uit.”",
+        review2Loc: "Interieurproject",
+        review3Text: "“Duidelijke communicatie vooraf, eerlijke prijs en een prachtig strak eindresultaat. Zeker een aanrader voor al je stucwerk!”",
+        review3Loc: "Wandafwerking",
+        contactSubtitle: "Neem contact op",
+        contactTitle: "Klaar om uw project te bespreken?",
+        contactDesc: "Heeft u vragen over stucwerk, sierpleister of wandafwerking? Neem direct contact met ons op via telefoon, e-mail of WhatsApp. Wij staan voor u klaar!",
+        labelPhone: "Telefoon",
+        labelEmail: "E-mailadres",
+        clickWhatsApp: "Stuur een bericht",
+        labelArea: "Werkgebied",
+        valArea: "Almere & omstreken"
+      },
+      en: {
+        navServices: "Services",
+        navGallery: "Projects",
+        navAbout: "About Us",
+        navReviews: "Reviews",
+        navContact: "Contact",
+        callDirect: "Call Direct",
+        heroBadge: "Expert Plastering & Finishing",
+        heroTitle1: "Smooth walls.",
+        heroTitle2: "Flawless finish.",
+        heroSubtitle: "Specialist in high-end plastering, decorative plaster, and wall finishing. With an eye for detail, clean working methods, and long-lasting results.",
+        heroCtaContact: "Direct Contact",
+        heroCtaGallery: "View Our Work",
+        badge1: "Professional Craftsmanship",
+        badge2: "Clean & Precise",
+        badge3: "Free Non-Binding Quote",
+        servicesSubtitle: "Our Services",
+        servicesTitle: "Quality Surfaces for Every Space",
+        servicesDesc: "From smooth modern walls to textured decorative plasters, we deliver tailored professional solutions.",
+        service1Title: "Plastering",
+        service1Desc: "Smooth wall and ceiling finishes for new builds, renovations, and complete property upgrades.",
+        service2Title: "Decorative Plastering",
+        service2Desc: "Characteristic textures and wall techniques adding depth, warm ambiance, and unique elegance.",
+        service3Title: "Wall Finishing",
+        service3Desc: "Thorough wall preparation and flawless paint-ready or wallpaper-ready finishes.",
+        moreInfo: "Learn More",
+        aboutSubtitle: "About Jowie Stuc & Afbouw",
+        aboutTitle: "Expert plastering crafted with passion",
+        aboutDesc: "At Jowie Stuc en Afbouw, everything revolves around quality, reliability, and precision. Whether it's a full home renovation or a single feature wall, we ensure smooth, flawless results.",
+        aboutBadgeText: "100% satisfaction guaranteed with meticulous attention to detail.",
+        aboutFeat1Title: "Honest Advice",
+        aboutFeat1Desc: "Clear upfront communication with transparent pricing.",
+        aboutFeat2Title: "Clean Completion",
+        aboutFeat2Desc: "We work with utmost precision and clean up thoroughly after finishing.",
+        contactUs: "Get In Touch",
+        projectsSubtitle: "Completed Projects",
+        projectsTitle: "Explore Our Work in Detail",
+        projectsDesc: "Swipe through the project carousel or view the full gallery. Click any photo to enlarge.",
+        carouselHeader: "Project Highlight Carousel",
+        fullGalleryTitle: "Full Photo Gallery",
+        lightboxHint: "Use left/right keyboard arrows or tap navigation buttons to view photos.",
+        reviewsSubtitle: "Customer Reviews",
+        reviewsTitle: "What Our Clients Say",
+        reviewsDesc: "Feedback from homeowners and businesses who chose Jowie Stuc en Afbouw.",
+        review1Text: "“Outstanding craftsmanship! Our walls are silky smooth and perfectly straight. The team left the workspace spotless.”",
+        review1Loc: "Home Renovation Almere",
+        review2Text: "“Extremely reliable and professional. Kept all promises and the decorative finish looks stunning.”",
+        review2Loc: "Interior Project",
+        review3Text: "“Transparent communication, fair quote, and a beautiful result. Highly recommended for any plastering work!”",
+        review3Loc: "Wall Finishing",
+        contactSubtitle: "Get In Touch",
+        contactTitle: "Ready to Discuss Your Project?",
+        contactDesc: "Have questions about plastering or wall finishing? Reach out directly via phone, email, or WhatsApp. We are here to help!",
+        labelPhone: "Phone",
+        labelEmail: "Email Address",
+        clickWhatsApp: "Send Message",
+        labelArea: "Service Area",
+        valArea: "Almere & Surrounding Region"
+      }
+    };
 
-            // Re-render showcase items to update language context if needed
-            renderShowcaseItems();
+    let currentLang = 'nl';
+
+    function switchLanguage(lang) {
+      if (!i18nData[lang]) return;
+      currentLang = lang;
+      
+      // Sync dropdown selects
+      document.getElementById('langSelect').value = lang;
+      document.getElementById('mobileLangSelect').value = lang;
+
+      // Update text elements with data-i18n attribute
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18nData[lang][key]) {
+          el.textContent = i18nData[lang][key];
         }
+      });
+    }
 
-        function toggleLangDropdown() {
-            const dd = document.getElementById('langDropdown');
-            dd.classList.toggle('hidden');
-        }
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
 
-        function toggleLangDropdownMobile() {
-            const dd = document.getElementById('langDropdownMobile');
-            dd.classList.toggle('hidden');
-        }
+    // ----------------------------------------------------
+    // 2. Dynamic Image Asset Loader (Work_1.jpeg ... Work_33.jpeg)
+    // ----------------------------------------------------
+    const TOTAL_ASSETS = 33;
+    const projectImages = [];
 
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            const icon = document.getElementById('mobileMenuIcon');
-            menu.classList.toggle('hidden');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-xmark');
-        }
+    // Fallback curated Unsplash plastering/interior images for graceful online preview if local assets are missing
+    const fallbackUrls = [
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80'
+    ];
 
-        // Generate 33 Asset Items
-        const showcaseData = Array.from({ length: 33 }, (_, i) => {
-            const id = i + 1;
-            const categoriesNL = ["Stucwerk", "Spackspuiten", "Betonlook", "Scheidingswanden", "Tegelwerk & Badkamers", "Totaalrenovatie"];
-            const categoriesEN = ["Plastering", "Airless Spraying", "Concrete Look", "Drywall Partitions", "Tiling & Bathrooms", "Total Renovation"];
-            const catIndex = i % categoriesNL.length;
-            
-            const titlesNL = [
-                "Luxe Woonkamer Stucwerk", "Strak Plafond Sausklaar", "Moderne Betonlook Wand", "Metalstud Wand & Isolatie",
-                "Luxe Badkamer Tegelwerk", "Complete Villa Renovatie", "Spierwit Latex Spuitwerk", "Sierpleister Hal & Trap",
-                "Keuken Wandafwerking", "Zolderverbouwing & Gipsplaten", "Panden Renovatie Amsterdam", "Appartement Sausklaar Maken"
-            ];
-            const titlesEN = [
-                "Luxury Living Room Stucco", "Sleek Ceiling Paint-Ready", "Modern Concrete Look Wall", "Metalstud Partition & Insulation",
-                "Luxury Bathroom Tiling", "Complete Villa Renovation", "Pure White Latex Spray", "Decorative Hallway Plaster",
-                "Kitchen Wall Finish", "Attic Remodeling & Drywall", "Amsterdam Building Renovation", "Apartment Paint-Ready Prep"
-            ];
-            
-            const titleNL = titlesNL[i % titlesNL.length] + ` #${id}`;
-            const titleEN = titlesEN[i % titlesEN.length] + ` #${id}`;
-            
-            const images = [
-                "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80"
-            ];
-            const img = images[i % images.length];
+    for (let i = 1; i <= TOTAL_ASSETS; i++) {
+      const fallbackIndex = (i - 1) % fallbackUrls.length;
+      projectImages.push({
+        id: i,
+        src: `assets/Work_${i}.jpeg`,
+        fallback: fallbackUrls[fallbackIndex],
+        title: `Work ${i}`
+      });
+    }
 
-            return {
-                id,
-                catNL: categoriesNL[catIndex],
-                catEN: categoriesEN[catIndex],
-                titleNL,
-                titleEN,
-                img
-            };
-        });
+    // Render Carousel and Grid on load
+    function initGallery() {
+      const carouselContainer = document.getElementById('projectCarousel');
+      const gridContainer = document.getElementById('galleryGrid');
 
-        let displayLimit = 6; // Initially show 6, toggle to 33 or let carousel paginate
+      carouselContainer.innerHTML = '';
+      gridContainer.innerHTML = '';
 
-        function renderShowcaseItems() {
-            const container = document.getElementById('showcaseSlider');
-            container.innerHTML = '';
-            
-            const itemsToShow = showcaseData.slice(0, displayLimit);
-            
-            itemsToShow.forEach(item => {
-                const cat = currentLang === 'nl' ? item.catNL : item.catEN;
-                const title = currentLang === 'nl' ? item.titleNL : item.titleEN;
-                
-                const card = document.createElement('div');
-                card.className = "bg-darkCard border border-slate-800 rounded-2xl overflow-hidden group hover:border-gold-400/50 transition-all duration-300 cursor-pointer shadow-lg";
-                card.onclick = () => openLightbox(item);
-                
-                card.innerHTML = `
-                    <div class="relative h-64 overflow-hidden bg-slate-900">
-                        <img src="${item.img}" alt="${title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x400/181b22/c8a97e?text=Jowie+Vakwerk+${item.id}'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-darkBg/80 via-transparent to-transparent opacity-80"></div>
-                        <span class="absolute top-4 left-4 bg-darkBg/80 backdrop-blur-md text-gold-400 text-xs font-bold px-3 py-1 rounded-full border border-gold-400/30">${cat}</span>
-                    </div>
-                    <div class="p-6 space-y-2">
-                        <div class="text-xs text-slate-500 font-mono">#${item.id} / 33</div>
-                        <h3 class="text-lg font-bold text-white group-hover:text-gold-400 transition-colors">${title}</h3>
-                        <p class="text-xs text-slate-400 line-clamp-2">
-                            ${currentLang === 'nl' ? 'Vakkundig uitgevoerd stuc- en afbouwwerk met oog voor absolute perfectie.' : 'Expertly executed plastering and finishing work with an eye for absolute perfection.'}
-                        </p>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
+      projectImages.forEach((imgObj, idx) => {
+        // --- 1. Populate Carousel Item ---
+        const carouselCard = document.createElement('div');
+        carouselCard.className = 'shrink-0 w-64 sm:w-80 aspect-[4/3] relative rounded-2xl overflow-hidden border border-white/10 group cursor-pointer bg-black/40';
+        carouselCard.onclick = () => openLightbox(idx);
 
-            document.getElementById('showcaseCounter').innerText = currentLang === 'nl' ? `Toont ${displayLimit} van 33 projecten` : `Showing ${displayLimit} of 33 projects`;
-            document.getElementById('showcaseToggleBtn').innerText = displayLimit === 6 
-                ? (currentLang === 'nl' ? 'Toon alle 33 projecten' : 'Show all 33 projects')
-                : (currentLang === 'nl' ? 'Toon beperkt overzicht' : 'Show limited view');
-        }
+        carouselCard.innerHTML = `
+          <img 
+            src="${imgObj.src}" 
+            alt="Jowie Stuc Werk ${imgObj.id}" 
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+            onerror="this.onerror=null; this.src='${imgObj.fallback}';"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+            <span class="text-white font-medium text-xs sm:text-sm">Work_${imgObj.id}.jpeg</span>
+          </div>
+        `;
+        carouselContainer.appendChild(carouselCard);
 
-        function toggleAllShowcaseItems() {
-            if (displayLimit === 6) {
-                displayLimit = 33;
-            } else {
-                displayLimit = 6;
-                document.getElementById('showcase').scrollIntoView({ behavior: 'smooth' });
-            }
-            renderShowcaseItems();
-        }
+        // --- 2. Populate Grid Item ---
+        const gridCard = document.createElement('div');
+        gridCard.className = 'group relative aspect-square bg-brandCard rounded-xl sm:rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-md';
+        gridCard.onclick = () => openLightbox(idx);
 
-        function nextShowcaseSlide() {
-            if (displayLimit === 6) {
-                displayLimit = Math.min(33, displayLimit + 3);
-                renderShowcaseItems();
-            }
-        }
+        gridCard.innerHTML = `
+          <img 
+            src="${imgObj.src}" 
+            alt="Jowie Stuc Werk ${imgObj.id}" 
+            class="w-full h-full object-cover group-hover:scale-110 transition duration-500" 
+            onerror="this.onerror=null; this.src='${imgObj.fallback}';"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-2.5">
+            <span class="text-white font-semibold text-[10px] sm:text-xs">Work_${imgObj.id}</span>
+          </div>
+        `;
+        gridContainer.appendChild(gridCard);
+      });
 
-        function prevShowcaseSlide() {
-            if (displayLimit > 6) {
-                displayLimit = Math.max(6, displayLimit - 3);
-                renderShowcaseItems();
-            }
-        }
+      document.getElementById('imageCounter').textContent = `${TOTAL_ASSETS} Images`;
+      document.getElementById('lightboxTotal').textContent = TOTAL_ASSETS;
+    }
 
-        function openLightbox(item) {
-            const modal = document.getElementById('lightboxModal');
-            document.getElementById('lightboxImg').src = item.img;
-            document.getElementById('lightboxCategory').innerText = currentLang === 'nl' ? item.catNL : item.catEN;
-            document.getElementById('lightboxTitle').innerText = currentLang === 'nl' ? item.titleNL : item.titleEN;
-            document.getElementById('lightboxDesc').innerText = currentLang === 'nl' 
-                ? `Project #${item.id} van Jowie Stuc en Afbouw. Hoogwaardige afwerking volgens de strengste kwaliteitsnormen.`
-                : `Project #${item.id} by Jowie Plastering & Finishing. High-end finish according to the strictest quality standards.`;
-            modal.classList.remove('hidden');
-        }
+    // Carousel Scrolling Function
+    function scrollCarousel(direction) {
+      const container = document.getElementById('projectCarousel');
+      const scrollAmount = 320;
+      container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
 
-        function closeLightbox() {
-            document.getElementById('lightboxModal').classList.add('hidden');
-        }
+    // ----------------------------------------------------
+    // 3. Lightbox Interactive Modal
+    // ----------------------------------------------------
+    let currentLightboxIdx = 0;
 
-        // Initialize on load
-        window.onload = function() {
-            renderShowcaseItems();
-        }
-    </script>
+    function openLightbox(index) {
+      currentLightboxIdx = index;
+      updateLightboxContent();
+      document.getElementById('lightbox').classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function updateLightboxContent() {
+      const imgObj = projectImages[currentLightboxIdx];
+      const imgEl = document.getElementById('lightboxImg');
+      
+      imgEl.src = imgObj.src;
+      imgEl.onerror = function() {
+        this.onerror = null;
+        this.src = imgObj.fallback;
+      };
+
+      document.getElementById('lightboxIndex').textContent = currentLightboxIdx + 1;
+    }
+
+    function prevLightboxImage() {
+      currentLightboxIdx = (currentLightboxIdx - 1 + TOTAL_ASSETS) % TOTAL_ASSETS;
+      updateLightboxContent();
+    }
+
+    function nextLightboxImage() {
+      currentLightboxIdx = (currentLightboxIdx + 1) % TOTAL_ASSETS;
+      updateLightboxContent();
+    }
+
+    // Keyboard Shortcuts for Lightbox
+    document.addEventListener('keydown', (e) => {
+      const lightbox = document.getElementById('lightbox');
+      if (lightbox.classList.contains('hidden')) return;
+
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') prevLightboxImage();
+      if (e.key === 'ArrowRight') nextLightboxImage();
+    });
+
+    // Initialize on load
+    window.onload = function() {
+      initGallery();
+      
+      // Update dynamic year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    };
+  </script>
+
 </body>
 </html>
