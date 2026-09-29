@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional contractor specialising in stuckwerk, decorative plastering and wall finishing." />
+  <title>Vakmanschap | Professional Plastering & Wall Finishing</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: "#1f2933",
+            warm: "#f7f5f0",
+            sand: "#c8a97e",
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+
+  <!-- ================= HEADER ================= -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="h-20 flex items-center justify-between">
+
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-charcoal text-white flex items-center justify-center font-bold text-lg">
+            V
+          </div>
+          <div>
+            <div class="font-bold text-lg tracking-tight">VAKMANSCHAP</div>
+            <div class="text-xs text-gray-500 tracking-wider">PLASTERING & FINISHING</div>
+          </div>
+        </a>
+
+        <!-- Desktop navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#services" class="hover:text-sand transition">Services</a>
+          <a href="#gallery" class="hover:text-sand transition">Projects</a>
+          <a href="#reviews" class="hover:text-sand transition">Reviews</a>
+          <a href="#contact" class="hover:text-sand transition">Contact</a>
+        </nav>
+
+        <a
+          href="tel:+31612345678"
+          class="hidden sm:inline-flex bg-charcoal text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-gray-700 transition"
+        >
+          Call Now
+        </a>
+
+        <!-- Mobile menu button -->
+        <button
+          id="menuButton"
+          class="md:hidden p-2 rounded-lg hover:bg-gray-100"
+          aria-label="Open menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile navigation -->
+      <nav id="mobileMenu" class="hidden md:hidden pb-5 border-t border-gray-100 pt-4">
+        <div class="flex flex-col gap-4 text-sm font-medium">
+          <a href="#services" class="mobile-link">Services</a>
+          <a href="#gallery" class="mobile-link">Projects</a>
+          <a href="#reviews" class="mobile-link">Reviews</a>
+          <a href="#contact" class="mobile-link">Contact</a>
+          <a href="tel:+31612345678" class="bg-charcoal text-white px-4 py-3 rounded-lg text-center">
+            Call Now
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+  <main>
+
+    <section class="relative min-h-screen flex items-center pt-20 bg-charcoal overflow-hidden">
+
+      <!-- Background image placeholder -->
+      <div
+        class="absolute inset-0 bg-cover bg-center opacity-30"
+        style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80');"
+      ></div>
+
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30"></div>
+
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full py-24">
+        <div class="max-w-3xl">
+
+          <span class="inline-block mb-6 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/90 text-sm backdrop-blur">
+            Professional plastering & wall finishing
+          </span>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
+            Beautiful walls.
+            <span class="text-sand">Perfect finish.</span>
+          </h1>
+
+          <p class="mt-6 text-lg sm:text-xl text-gray-200 leading-relaxed max-w-2xl">
+            Professional stuckwerk, decorative plastering and wall finishing
+            with attention to detail, clean workmanship and lasting results.
+          </p>
+
+          <div class="mt-9 flex flex-col sm:flex-row gap-4">
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center bg-sand text-white px-7 py-4 rounded-lg font-semibold hover:opacity-90 transition"
+            >
+              Request a Quote
+            </a>
+
+            <a
+              href="#gallery"
+              class="inline-flex items-center justify-center border border-white/40 text-white px-7 py-4 rounded-lg font-semibold hover:bg-white/10 transition"
+            >
+              View Our Work
+            </a>
+          </div>
+
+          <div class="mt-12 flex flex-wrap gap-x-8 gap-y-4 text-sm text-gray-200">
+            <div class="flex items-center gap-2">
+              <span class="text-sand">✓</span>
+              Professional workmanship
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sand">✓</span>
+              Clean & precise
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sand">✓</span>
+              Free quotation
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="py-24 bg-warm">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div class="max-w-2xl mb-14">
+          <span class="text-sand font-semibold text-sm uppercase tracking-widest">
+            Our services
+          </span>
+
+          <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-charcoal">
+            Quality finishes for every space
+          </h2>
+
+          <p class="mt-4 text-gray-600 text-lg">
+            From smooth modern walls to decorative finishes, we provide
+            professional solutions tailored to your home or business.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <!-- Service 1 -->
+          <article class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition">
+            <div class="w-14 h-14 rounded-xl bg-charcoal text-white flex items-center justify-center mb-7">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                  d="M4 20h16M6 16l4-12h4l4 12M8 12h8"/>
+              </svg>
+            </div>
+
+            <h3 class="text-xl font-bold text-charcoal">
+              Stuckwerk
+            </h3>
+
+            <p class="mt-4 text-gray-600 leading-relaxed">
+              Smooth and durable wall finishes for new builds, renovations
+              and complete interior transformations.
+            </p>
+
+            <a href="#contact" class="inline-block mt-6 font-semibold text-charcoal hover:text-sand">
+              Ask about stuckwerk →
+            </a>
+          </article>
+
+
+          <!-- Service 2 -->
+          <article class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition">
+            <div class="w-14 h-14 rounded-xl bg-charcoal text-white flex items-center justify-center mb-7">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                  d="M5 19c4-1 7-4 8-8l1-4 5-2-2 5-4 1c-1 4-4 7-8 8z"/>
+              </svg>
+            </div>
+
+            <h3 class="text-xl font-bold text-charcoal">
+              Decorative plastering
+            </h3>
+
+            <p class="mt-4 text-gray-600 leading-relaxed">
+              Characterful decorative finishes that add texture, depth and
+              a distinctive look to your interior.
+            </p>
+
+            <a href="#contact" class="inline-block mt-6 font-semibold text-charcoal hover:text-sand">
+              Ask about decorative plastering →
+            </a>
+          </article>
+
+
+          <!-- Service 3 -->
+          <article class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition">
+            <div class="w-14 h-14 rounded-xl bg-charcoal text-white flex items-center justify-center mb-7">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                  d="M4 17l4-4 3 3 5-7 4 4M4 20h16"/>
+              </svg>
+            </div>
+
+            <h3 class="text-xl font-bold text-charcoal">
+              Wall finishing
+            </h3>
+
+            <p class="mt-4 text-gray-600 leading-relaxed">
+              Detailed preparation and finishing to create clean, even walls
+              ready for painting, wallpaper or your chosen final finish.
+            </p>
+
+            <a href="#contact" class="inline-block mt-6 font-semibold text-charcoal hover:text-sand">
+              Ask about wall finishing →
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+    <section id="gallery" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div>
+            <span class="text-sand font-semibold text-sm uppercase tracking-widest">
+              Recent work
+            </span>
+
+            <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-charcoal">
+              See the difference
+            </h2>
+          </div>
+
+          <p class="text-gray-600 max-w-md">
+            A selection of projects showcasing our attention to detail
+            and professional finishing.
+          </p>
+        </div>
+
+        <!-- Replace these placeholders with actual project photos -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+          <div class="group aspect-square bg-gray-200 rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+              alt="Modern finished interior"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+
+          <div class="group aspect-square bg-gray-200 rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80"
+              alt="Finished wall interior"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+
+          <div class="group aspect-square bg-gray-200 rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80"
+              alt="Interior wall finish"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+
+          <div class="group aspect-square bg-gray-200 rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80"
+              alt="Contemporary interior"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+
+          <div class="group col-span-2 aspect-[2/1] bg-gray-200 rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+              alt="Home renovation project"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+
+          <div class="group col-span-2 aspect-[2/1] bg-gray-200 rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80"
+              alt="Professional wall finishing"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section id="reviews" class="py-24 bg-charcoal">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-sand font-semibold text-sm uppercase tracking-widest">
+            Client reviews
+          </span>
+
+          <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-white">
+            Trusted by our customers
+          </h2>
+
+          <p class="mt-4 text-gray-400">
+            Professional service, clear communication and attention to detail
+            from start to finish.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <blockquote class="bg-white/5 border border-white/10 rounded-2xl p-7">
+            <div class="text-sand text-lg mb-5">★★★★★</div>
+
+            <p class="text-gray-200 leading-relaxed">
+              “Excellent work from beginning to end. The walls are beautifully
+              finished and the whole area was left very clean.”
+            </p>
+
+            <footer class="mt-7">
+              <div class="font-semibold text-white">Michael R.</div>
+              <div class="text-sm text-gray-400">Home renovation</div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="bg-white/5 border border-white/10 rounded-2xl p-7">
+            <div class="text-sand text-lg mb-5">★★★★★</div>
+
+            <p class="text-gray-200 leading-relaxed">
+              “Very professional and reliable. The decorative finish looks
+              fantastic and we received exactly what we discussed.”
+            </p>
+
+            <footer class="mt-7">
+              <div class="font-semibold text-white">Sophie V.</div>
+              <div class="text-sm text-gray-400">Interior project</div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="bg-white/5 border border-white/10 rounded-2xl p-7">
+            <div class="text-sand text-lg mb-5">★★★★★</div>
+
+            <p class="text-gray-200 leading-relaxed">
+              “Clear communication, fair pricing and great attention to detail.
+              I would definitely contact them again for another project.”
+            </p>
+
+            <footer class="mt-7">
+              <div class="font-semibold text-white">Daniel K.</div>
+              <div class="text-sm text-gray-400">Wall finishing</div>
+            </footer>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="py-24 bg-warm">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-2 gap-14 lg:gap-24 items-start">
+
+          <div>
+            <span class="text-sand font-semibold text-sm uppercase tracking-widest">
+              Get in touch
+            </span>
+
+            <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-charcoal">
+              Let's discuss your project
+            </h2>
+
+            <p class="mt-5 text-gray-600 text-lg leading-relaxed">
+              Looking for a reliable professional for your next plastering
+              or wall-finishing project? Contact us for more information
+              or a quotation.
+            </p>
+
+            <div class="mt-10 space-y-6">
+
+              <!-- Phone -->
+              <a href="tel:+31612345678" class="flex items-center gap-4 group">
+                <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center">
+                  <svg class="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.52l.58 2.32a2 2 0 01-.57 1.9L8 10a16 16 0 006 6l1.26-1.23a2 2 0 011.9-.57l2.32.58A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/>
+                  </svg>
+                </div>
+
+                <div>
+                  <div class="text-sm text-gray-500">Phone</div>
+                  <div class="font-semibold text-charcoal group-hover:text-sand">
+                    +31 6 12 34 56 78
+                  </div>
+                </div>
+              </a>
+
+
+              <!-- Email -->
+              <a href="mailto:info@example.nl" class="flex items-center gap-4 group">
+                <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center">
+                  <svg class="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-width="2"
+                      d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+
+                <div>
+                  <div class="text-sm text-gray-500">Email</div>
+                  <div class="font-semibold text-charcoal group-hover:text-sand">
+                    info@example.nl
+                  </div>
+                </div>
+              </a>
+
+
+              <!-- WhatsApp -->
+              <a
+                href="https://wa.me/31612345678"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-4 group"
+              >
+                <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center">
+                  <svg class="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-width="1.8"
+                      d="M20 11.5a8 8 0 01-11.9 7L4 20l1.5-4A8 8 0 1120 11.5z"/>
+                    <path stroke="currentColor" stroke-width="1.8"
+                      d="M8.5 8.5c.3-.4.6-.4.9-.1l.8.9c.2.2.2.5 0 .8l-.4.5c.7 1.2 1.6 2.1 2.8 2.8l.5-.4c.3-.2.6-.2.8 0l.9.8c.3.3.3.6-.1.9-.5.5-1.1.7-1.7.5-2.7-.8-4.9-3-5.7-5.7-.2-.6 0-1.2.5-1.7z"/>
+                  </svg>
+                </div>
+
+                <div>
+                  <div class="text-sm text-gray-500">WhatsApp</div>
+                  <div class="font-semibold text-charcoal group-hover:text-sand">
+                    Chat with us
+                  </div>
+                </div>
+              </a>
+
+
+              <!-- Service area -->
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center">
+                  <svg class="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 21s7-5.4 7-12a7 7 0 10-14 0c0 6.6 7 12 7 12z"/>
+                    <circle cx="12" cy="9" r="2.5"/>
+                  </svg>
+                </div>
+
+                <div>
+                  <div class="text-sm text-gray-500">Service area</div>
+                  <div class="font-semibold text-charcoal">
+                    Hoofddorp & surrounding areas
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Contact card -->
+          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-7 sm:p-9">
+
+            <h3 class="text-2xl font-bold text-charcoal">
+              Request a quotation
+            </h3>
+
+            <p class="mt-2 text-gray-600">
+              Tell us a little about your project and we'll get back to you.
+            </p>
+
+            <form class="mt-7 space-y-5" action="#" method="POST">
+
+              <div>
+                <label for="name" class="block text-sm font-medium mb-2">
+                  Name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Your name"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-sand/50 focus:border-sand"
+                />
+              </div>
+
+              <div>
+                <label for="phone" class="block text-sm font-medium mb-2">
+                  Phone
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Your phone number"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-sand/50 focus:border-sand"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium mb-2">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="you@example.com"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-sand/50 focus:border-sand"
+                />
+              </div>
+
+              <div>
+                <label for="service" class="block text-sm font-medium mb-2">
+                  Service
+                </label>
+
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-sand/50 focus:border-sand"
+                >
+                  <option>Stuckwerk</option>
+                  <option>Decorative plastering</option>
+                  <option>Wall finishing</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium mb-2">
+                  Project details
+                </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Tell us about your project..."
+                  class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-sand/50 focus:border-sand"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-charcoal text-white py-3.5 rounded-lg font-semibold hover:bg-gray-700 transition"
+              >
+                Send Request
+              </button>
+
+              <p class="text-xs text-gray-500 text-center">
+                We'll contact you as soon as possible.
+              </p>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-gray-950 text-gray-400">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+      <div class="py-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <div>
+          <div class="text-white font-bold text-lg">
+            VAKMANSCHAP
+          </div>
+
+          <p class="mt-3 text-sm leading-relaxed max-w-sm">
+            Professional stuckwerk, decorative plastering and wall finishing
+            for homes and businesses.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold">
+            Services
+          </h3>
+
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>Stuckwerk</li>
+            <li>Decorative plastering</li>
+            <li>Wall finishing</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold">
+            Contact
+          </h3>
+
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>+31 6 12 34 56 78</li>
+            <li>info@example.nl</li>
+            <li>Hoofddorp & surrounding areas</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 py-6 flex flex-col sm:flex-row justify-between gap-3 text-xs">
+        <span>© 2026 Vakmanschap. All rights reserved.</span>
+        <span>Professional plastering & wall finishing</span>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    document.querySelectorAll(".mobile-link").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  </script>
+
+</body>
+</html>
