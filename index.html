@@ -164,7 +164,7 @@
           </h1>
 
           <p class="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed font-light max-w-2xl" data-i18n="heroDesc">
-            Gespecialiseerd in meesterlijk stucwerk en wandafwerking, evenals volledige renovatieprojecten. Van luxe badkamers en vloeren tot een totale woningtransformator met oog voor elk detail.
+            Gespecialiseerd in meesterlijk stucwerk en wandafwerking, evenals volledige renovatieprojecten. Van luxe badkamers en vloeren tot een totale woningtransformatie met oog voor elk detail.
           </p>
 
           <div class="mt-10 flex flex-col sm:flex-row gap-4">
@@ -346,7 +346,7 @@
         <div class="mt-12 p-8 rounded-2xl bg-gradient-to-r from-brandCard via-brandCardHover to-brandCard border border-sand/30 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h4 class="text-xl font-bold text-white" data-i18n="renoBannerTitle">Heeft u een specifiek renovatieproject?</h4>
-            <p class="text-gray-300 text-sm mt-1" data-i18n="renoBannerDesc">Neem direct contact op om uw plannen en wensen vrijblijvend doorte spreken.</p>
+            <p class="text-gray-300 text-sm mt-1" data-i18n="renoBannerDesc">Neem direct contact op om uw plannen en wensen vrijblijvend door te spreken.</p>
           </div>
           <a href="#contact" class="bg-sand text-brandDark font-bold px-6 py-3 rounded-xl hover:bg-sandLight transition shrink-0" data-i18n="contactUsNow">
             Contacteer Ons
@@ -417,59 +417,47 @@
     </section>
 
 
-    <!-- ================= PROJECTS & CAROUSEL SECTION ================= -->
+    <!-- ================= UNIFIED PROJECTS CAROUSEL SECTION ================= -->
     <section id="gallery" class="py-24 bg-brandCard/30 border-t border-b border-white/5">
       <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
             <span class="text-sand font-semibold text-sm uppercase tracking-widest" data-i18n="projectsSubtitle">
-              Portfolio
+              Portfolio & Projecten
             </span>
             <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="projectsTitle">
-              Gerealiseerde Projecten
+              Onze Gerealiseerde Projecten
             </h2>
           </div>
           <p class="text-gray-400 max-w-md text-base" data-i18n="projectsDesc">
-            Bekijk een greep uit onze stuc-, badkamer-, vloer- en renovatiewerken. Blader door de carrousel of bekijk het overzicht.
+            Swipe of gebruik de pijlen om door al onze stuc-, afbouw- en renovatiefoto's te bladeren. Klik op een foto voor een vergroting.
           </p>
         </div>
 
-        <!-- Carousel Feature Header -->
-        <div class="relative bg-brandCard rounded-3xl p-4 sm:p-6 border border-white/10 shadow-2xl mb-12">
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-sand"></span>
-              <h3 class="text-lg font-bold text-white" data-i18n="carouselTitle">Projecten Highlights Slide</h3>
+        <!-- Single Unified Image Carousel Box -->
+        <div class="relative bg-brandCard rounded-3xl p-4 sm:p-6 border border-white/10 shadow-2xl">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3">
+              <span class="w-3 h-3 rounded-full bg-sand animate-pulse"></span>
+              <span class="text-white font-bold text-base sm:text-lg" data-i18n="carouselHeader">Projecten & Renovatie Galerie</span>
             </div>
+            
+            <!-- Carousel Navigation Arrows -->
             <div class="flex items-center gap-2">
-              <button onclick="slideCarousel(-1)" class="p-3 rounded-xl bg-white/5 hover:bg-sand hover:text-brandDark text-white transition border border-white/10" aria-label="Previous image">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+              <button onclick="slideCarousel(-1)" class="p-3 rounded-xl bg-white/5 hover:bg-sand hover:text-brandDark text-white transition border border-white/10 active:scale-95" aria-label="Previous images">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
               </button>
-              <button onclick="slideCarousel(1)" class="p-3 rounded-xl bg-white/5 hover:bg-sand hover:text-brandDark text-white transition border border-white/10" aria-label="Next image">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              <button onclick="slideCarousel(1)" class="p-3 rounded-xl bg-white/5 hover:bg-sand hover:text-brandDark text-white transition border border-white/10 active:scale-95" aria-label="Next images">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
               </button>
             </div>
           </div>
 
-          <!-- Carousel Container -->
+          <!-- Carousel Track: Dynamically loaded without needing HTML edits when adding Work_xx.jpeg images -->
           <div id="carouselTrack" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth custom-scrollbar pb-4">
-            <!-- Dynamic carousel items injected via JavaScript -->
+            <!-- Dynamically populated via JS -->
           </div>
-        </div>
-
-        <!-- Grid Filter Tags -->
-        <div class="flex flex-wrap items-center gap-2 mb-8" id="filterContainer">
-          <button onclick="filterGallery('all')" class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-sand bg-sand text-brandDark transition" data-category="all" data-i18n="filterAll">Alle Foto's</button>
-          <button onclick="filterGallery('stuc')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-white/10 bg-brandCard text-gray-300 hover:border-sand transition" data-category="stuc" data-i18n="filterStuc">Stuc & Afbouw</button>
-          <button onclick="filterGallery('bathroom')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-white/10 bg-brandCard text-gray-300 hover:border-sand transition" data-category="bathroom" data-i18n="filterBathroom">Badkamers</button>
-          <button onclick="filterGallery('flooring')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-white/10 bg-brandCard text-gray-300 hover:border-sand transition" data-category="flooring" data-i18n="filterFloors">Vloeren</button>
-          <button onclick="filterGallery('renovation')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-white/10 bg-brandCard text-gray-300 hover:border-sand transition" data-category="renovation" data-i18n="filterReno">Renovatie</button>
-        </div>
-
-        <!-- Full Gallery Grid (Loaded via JS) -->
-        <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Dynamically populated from assets/Work_1.jpeg to Work_33.jpeg and beyond -->
         </div>
 
       </div>
@@ -662,156 +650,73 @@
     // Set Current Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // ================= DYNAMIC ASSET & GALLERY GENERATOR =================
-    // Total available asset images (33 work images requested + fallback placeholders)
-    const TOTAL_WORK_IMAGES = 33; 
+    // ================= DYNAMIC CAROUSEL ASSET GENERATOR =================
+    // Auto-scans up to 50 assets images dynamically (e.g., assets/Work_1.jpeg, Work_2.jpeg...)
+    // When you upload new Work_xx.jpeg images to assets/, they will display automatically!
+    const MAX_IMAGES_TO_SCAN = 50; 
     const imagesData = [];
 
-    // Fallback unsplash URLs mapped to categories to ensure seamless rendering
-    const categoryFallbacks = {
-      stuc: [
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80'
-      ],
-      bathroom: [
-        'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80'
-      ],
-      flooring: [
-        'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80'
-      ],
-      renovation: [
-        'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80'
-      ]
-    };
+    // General unsplash fallbacks if local files are missing on preview server
+    const generalFallbacks = [
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80'
+    ];
 
-    // Distribute images across categories representing the 3-4 projects
-    for (let i = 1; i <= TOTAL_WORK_IMAGES; i++) {
-      let category = 'stuc';
-      let titleNL = `Stucwerk Project #${i}`;
-      let titleEN = `Plastering Project #${i}`;
-
-      if (i % 4 === 1) {
-        category = 'stuc';
-        titleNL = `Stucwerk & Wandafwerking #${i}`;
-        titleEN = `Plastering & Wall Finish #${i}`;
-      } else if (i % 4 === 2) {
-        category = 'bathroom';
-        titleNL = `Badkamer Renovatie #${i}`;
-        titleEN = `Bathroom Renovation #${i}`;
-      } else if (i % 4 === 3) {
-        category = 'flooring';
-        titleNL = `Vloerafwerking #${i}`;
-        titleEN = `Floor Renovation #${i}`;
-      } else {
-        category = 'renovation';
-        titleNL = `Complete Renovatie #${i}`;
-        titleEN = `Complete Renovation #${i}`;
-      }
-
+    for (let i = 1; i <= MAX_IMAGES_TO_SCAN; i++) {
       imagesData.push({
         id: i,
         src: `assets/Work_${i}.jpeg`,
-        category: category,
-        titleNL: titleNL,
-        titleEN: titleEN,
-        fallbackSrc: categoryFallbacks[category][i % 2]
+        titleNL: `Project / Renovatie #${i}`,
+        titleEN: `Project / Renovation #${i}`,
+        fallbackSrc: generalFallbacks[i % generalFallbacks.length]
       });
     }
 
-    let currentActiveFilter = 'all';
-    let filteredImagesList = [...imagesData];
     let currentLightboxIndex = 0;
 
-    // Render Gallery Grid & Carousel
-    function initGallery() {
-      const grid = document.getElementById('galleryGrid');
+    // Render Single Clean Project Carousel
+    function initCarousel() {
       const carousel = document.getElementById('carouselTrack');
-      
-      grid.innerHTML = '';
       carousel.innerHTML = '';
 
-      // Populate Carousel (First 12 highlighted images)
-      imagesData.slice(0, 12).forEach((img, idx) => {
-        const carouselCard = document.createElement('div');
-        carouselCard.className = 'snap-start shrink-0 w-72 sm:w-80 group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-brandCard cursor-pointer shadow-lg';
-        carouselCard.onclick = () => openLightboxByImgId(img.id);
+      imagesData.forEach((img, idx) => {
+        const card = document.createElement('div');
+        card.className = 'snap-start shrink-0 w-72 sm:w-96 group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-brandCard cursor-pointer shadow-xl hover:border-sand/50 transition duration-300';
+        card.onclick = () => openLightbox(idx);
         
-        carouselCard.innerHTML = `
+        card.innerHTML = `
           <img src="${img.src}" alt="${img.titleNL}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.onerror=null; this.src='${img.fallbackSrc}';" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition duration-300 flex items-end p-5">
             <div>
-              <span class="text-xs text-sand font-semibold uppercase tracking-wider">${img.category}</span>
-              <h4 class="text-white font-bold text-sm leading-snug">${currentLang === 'nl' ? img.titleNL : img.titleEN}</h4>
+              <span class="text-xs text-sand font-bold tracking-wider uppercase">${currentLang === 'nl' ? 'Gerealiseerd Werk' : 'Project Highlight'}</span>
+              <h4 class="text-white font-bold text-base leading-snug">${currentLang === 'nl' ? img.titleNL : img.titleEN}</h4>
             </div>
           </div>
         `;
-        carousel.appendChild(carouselCard);
+        carousel.appendChild(card);
       });
-
-      // Populate Full Gallery Grid
-      filteredImagesList.forEach((img) => {
-        const gridItem = document.createElement('div');
-        gridItem.className = 'group relative aspect-square bg-brandCard rounded-2xl overflow-hidden border border-white/10 shadow-lg cursor-pointer hover:border-sand/50 transition duration-300';
-        gridItem.onclick = () => openLightboxByImgId(img.id);
-
-        gridItem.innerHTML = `
-          <img src="${img.src}" alt="${img.titleNL}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.onerror=null; this.src='${img.fallbackSrc}';" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-5">
-            <div>
-              <span class="text-xs text-sand font-bold uppercase">${img.category}</span>
-              <p class="text-white font-semibold text-sm">${currentLang === 'nl' ? img.titleNL : img.titleEN}</p>
-            </div>
-          </div>
-        `;
-        grid.appendChild(gridItem);
-      });
-    }
-
-    // Filter Functionality
-    function filterGallery(category) {
-      currentActiveFilter = category;
-      
-      // Update Button Styles
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        if(btn.dataset.category === category) {
-          btn.className = 'filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-sand bg-sand text-brandDark transition';
-        } else {
-          btn.className = 'filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-white/10 bg-brandCard text-gray-300 hover:border-sand transition';
-        }
-      });
-
-      if (category === 'all') {
-        filteredImagesList = [...imagesData];
-      } else {
-        filteredImagesList = imagesData.filter(item => item.category === category);
-      }
-
-      initGallery();
     }
 
     // Carousel Scroll Controls
     function slideCarousel(direction) {
       const container = document.getElementById('carouselTrack');
-      const scrollAmount = 320;
+      const scrollAmount = 350;
       container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
 
-    // Lightbox Modal Controls
-    function openLightboxByImgId(id) {
-      const index = filteredImagesList.findIndex(item => item.id === id);
-      if (index !== -1) {
-        currentLightboxIndex = index;
-        updateLightboxContent();
-        document.getElementById('lightbox').classList.remove('hidden');
-        document.getElementById('lightbox').classList.add('flex');
-      }
+    // Lightbox Controls
+    function openLightbox(index) {
+      currentLightboxIndex = index;
+      updateLightboxContent();
+      document.getElementById('lightbox').classList.remove('hidden');
+      document.getElementById('lightbox').classList.add('flex');
     }
 
     function updateLightboxContent() {
-      const item = filteredImagesList[currentLightboxIndex];
+      const item = imagesData[currentLightboxIndex];
       const imgElem = document.getElementById('lightboxImg');
       const captionElem = document.getElementById('lightboxCaption');
       
@@ -826,14 +731,12 @@
     }
 
     function prevLightboxImage() {
-      if (filteredImagesList.length === 0) return;
-      currentLightboxIndex = (currentLightboxIndex - 1 + filteredImagesList.length) % filteredImagesList.length;
+      currentLightboxIndex = (currentLightboxIndex - 1 + imagesData.length) % imagesData.length;
       updateLightboxContent();
     }
 
     function nextLightboxImage() {
-      if (filteredImagesList.length === 0) return;
-      currentLightboxIndex = (currentLightboxIndex + 1) % filteredImagesList.length;
+      currentLightboxIndex = (currentLightboxIndex + 1) % imagesData.length;
       updateLightboxContent();
     }
 
@@ -857,7 +760,7 @@
         heroBadge: "Meesterlijk Stucwerk & Complete Renovatie",
         heroTitle1: "Vakkundig Stucwerk.",
         heroTitle2: "Complete Woningrenovatie.",
-        heroDesc: "Gespecialiseerd in meesterlijk stucwerk en wandafwerking, evenals volledige renovatieprojecten. Van luxe badkamers en vloeren tot een totale woningtransformator met oog voor elk detail.",
+        heroDesc: "Gespecialiseerd in meesterlijk stucwerk en wandafwerking, evenals volledige renovatieprojecten. Van luxe badkamers en vloeren tot een totale woningtransformatie met oog voor elk detail.",
         heroCta1: "Neem Direct Contact Op",
         heroCta2: "Bekijk Ons Werk",
         badge1: "Stuc- & Pleister Meesterschap",
@@ -883,7 +786,7 @@
         r3Title: "Complete Woningrenovatie",
         r3Desc: "Herindeling van ruimtes, gipsplaten wanden, plafondafwerking en algehele herstelwerkzaamheden voor uw gehele woning of bedrijfspand.",
         renoBannerTitle: "Heeft u een specifiek renovatieproject?",
-        renoBannerDesc: "Neem direct contact op om uw plansen en wensen vrijblijvend door te spreken.",
+        renoBannerDesc: "Neem direct contact op om uw plannen en wensen vrijblijvend door te spreken.",
         contactUsNow: "Contacteer Ons",
         aboutSubtitle: "Over Jowie Stuc, Afbouw & Renovatie",
         aboutTitle: "Vakmanschap & Passie voor Verbouwingen",
@@ -894,15 +797,10 @@
         aboutPoint2Desc: "Wij werken netjes, dekken alles zorgvuldig af en leveren de werkplek schoon op.",
         aboutStatText: "Vakkundige tevredenheid en oog voor elk detail.",
         aboutCta: "Neem Direct Contact Op",
-        projectsSubtitle: "Portfolio",
-        projectsTitle: "Gerealiseerde Projecten",
-        projectsDesc: "Bekijk een greep uit onze stuc-, badkamer-, vloer- en renovatiewerken. Blader door de carrousel of bekijk het overzicht.",
-        carouselTitle: "Projecten Highlights Slide",
-        filterAll: "Alle Foto's",
-        filterStuc: "Stuc & Afbouw",
-        filterBathroom: "Badkamers",
-        filterFloors: "Vloeren",
-        filterReno: "Renovatie",
+        projectsSubtitle: "Portfolio & Projecten",
+        projectsTitle: "Onze Gerealiseerde Projecten",
+        projectsDesc: "Swipe of gebruik de pijlen om door al onze stuc-, afbouw- en renovatiefoto's te bladeren. Klik op een foto voor een vergroting.",
+        carouselHeader: "Projecten & Renovatie Galerie",
         reviewsSubtitle: "Klantbeoordelingen",
         reviewsTitle: "Ervaringen van Onze Klanten",
         reviewsDesc: "Ervaringen van huiseigenaren die kozen voor de kwaliteit van Jowie Stuc, Afbouw & Renovatie.",
@@ -974,15 +872,10 @@
         aboutPoint2Desc: "We work neatly, cover all surfaces carefully, and leave the workspace tidy.",
         aboutStatText: "100% craftsman satisfaction and eye for detail.",
         aboutCta: "Get in Touch Directly",
-        projectsSubtitle: "Portfolio",
+        projectsSubtitle: "Portfolio & Projects",
         projectsTitle: "Completed Projects",
-        projectsDesc: "Explore highlights of our plastering, bathroom, floor, and renovation work. Browse through the slider or gallery grid.",
-        carouselTitle: "Featured Highlights Slide",
-        filterAll: "All Photos",
-        filterStuc: "Plastering",
-        filterBathroom: "Bathrooms",
-        filterFloors: "Flooring",
-        filterReno: "Renovations",
+        projectsDesc: "Swipe or click the arrows to browse through all our plastering, finishing, and renovation project photos. Click any photo to enlarge.",
+        carouselHeader: "Projects & Renovation Gallery",
         reviewsSubtitle: "Testimonials",
         reviewsTitle: "What Our Clients Say",
         reviewsDesc: "Experiences from homeowners who trusted Jowie Stuc, Afbouw & Renovatie.",
@@ -1020,13 +913,12 @@
         }
       });
 
-      // Refresh gallery titles according to active language
-      initGallery();
+      initCarousel();
     }
 
     // Initialize Page
     document.addEventListener('DOMContentLoaded', () => {
-      initGallery();
+      initCarousel();
     });
   </script>
 
