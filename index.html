@@ -1,83 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional contractor specialising in stuckwerk, decorative plastering and wall finishing." />
-  <title>Vakmanschap | Professional Plastering & Wall Finishing</title>
+  <meta name="description" content="Jowie Stuc en Afbouw - Vakkundig stucwerk, decorative plastering en wandafwerking in Almere en omgeving." />
+  <title>Jowie Stuc en Afbouw | Vakkundig Stucwerk & Afbouw</title>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
           colors: {
-            charcoal: "#1f2933",
-            warm: "#f7f5f0",
+            brandDark: "#121212",
+            brandCard: "#1a1a1a",
+            brandCardHover: "#242424",
             sand: "#c8a97e",
+            sandLight: "#dfc4a0",
+            warm: "#f7f5f0",
           }
         }
       }
     };
   </script>
+
+  <style>
+    /* Custom smooth scrollbar and utilities */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #dfc4a0 0%, #c8a97e 50%, #9a7b51 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
 
-<body class="bg-white text-gray-800 antialiased">
+<body class="bg-brandDark text-gray-100 antialiased selection:bg-sand selection:text-black">
 
   <!-- ================= HEADER ================= -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-brandDark/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-      <div class="h-20 flex items-center justify-between">
+      <div class="h-24 flex items-center justify-between">
 
-        <a href="#" class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-charcoal text-white flex items-center justify-center font-bold text-lg">
-            V
+        <!-- Logo & Branding -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <div class="w-14 h-14 rounded-xl overflow-hidden border border-sand/30 bg-black flex items-center justify-center shadow-lg group-hover:border-sand transition">
+            <img src="assets/logo.jpeg" alt="Jowie Stuc en Afbouw Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/100x100/121212/c8a97e?text=JOWIE';" />
           </div>
           <div>
-            <div class="font-bold text-lg tracking-tight">VAKMANSCHAP</div>
-            <div class="text-xs text-gray-500 tracking-wider">PLASTERING & FINISHING</div>
+            <div class="font-bold text-xl tracking-wider text-white">JOWIE</div>
+            <div class="text-[11px] text-sand font-medium tracking-widest uppercase">STUC EN AFBOUW</div>
           </div>
         </a>
 
-        <!-- Desktop navigation -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="#services" class="hover:text-sand transition">Services</a>
-          <a href="#gallery" class="hover:text-sand transition">Projects</a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+          <a href="#services" class="hover:text-sand transition">Diensten</a>
+          <a href="#gallery" class="hover:text-sand transition">Projecten</a>
+          <a href="#about" class="hover:text-sand transition">Over Ons</a>
           <a href="#reviews" class="hover:text-sand transition">Reviews</a>
           <a href="#contact" class="hover:text-sand transition">Contact</a>
         </nav>
 
-        <a
-          href="tel:+31612345678"
-          class="hidden sm:inline-flex bg-charcoal text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-gray-700 transition"
-        >
-          Call Now
-        </a>
+        <!-- Call Button Desktop -->
+        <div class="hidden sm:flex items-center gap-4">
+          <a
+            href="tel:+31682902107"
+            class="inline-flex items-center gap-2 bg-sand text-brandDark px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-sandLight transition shadow-lg shadow-sand/10"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.52l.58 2.32a2 2 0 01-.57 1.9L8 10a16 16 0 006 6l1.26-1.23a2 2 0 011.9-.57l2.32.58A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/></svg>
+            Bel Direct
+          </a>
+        </div>
 
-        <!-- Mobile menu button -->
+        <!-- Mobile Menu Button -->
         <button
           id="menuButton"
-          class="md:hidden p-2 rounded-lg hover:bg-gray-100"
+          class="md:hidden p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-200 hover:bg-white/10 transition"
           aria-label="Open menu"
         >
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
       </div>
 
-      <!-- Mobile navigation -->
-      <nav id="mobileMenu" class="hidden md:hidden pb-5 border-t border-gray-100 pt-4">
-        <div class="flex flex-col gap-4 text-sm font-medium">
-          <a href="#services" class="mobile-link">Services</a>
-          <a href="#gallery" class="mobile-link">Projects</a>
-          <a href="#reviews" class="mobile-link">Reviews</a>
-          <a href="#contact" class="mobile-link">Contact</a>
-          <a href="tel:+31612345678" class="bg-charcoal text-white px-4 py-3 rounded-lg text-center">
-            Call Now
+      <!-- Mobile Navigation Drawer -->
+      <nav id="mobileMenu" class="hidden md:hidden pb-6 border-t border-white/10 pt-4 bg-brandDark/95 rounded-b-2xl shadow-2xl">
+        <div class="flex flex-col gap-4 text-base font-medium px-2">
+          <a href="#services" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 hover:text-sand transition">Diensten</a>
+          <a href="#gallery" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 hover:text-sand transition">Projecten</a>
+          <a href="#about" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 hover:text-sand transition">Over Ons</a>
+          <a href="#reviews" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 hover:text-sand transition">Reviews</a>
+          <a href="#contact" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 hover:text-sand transition">Contact</a>
+          <a href="tel:+31682902107" class="mt-2 bg-sand text-brandDark px-4 py-3 rounded-xl font-bold text-center shadow-md">
+            +31 6 12 34 56 78
           </a>
         </div>
       </nav>
@@ -85,64 +114,65 @@
   </header>
 
 
-  <!-- ================= HERO ================= -->
+  <!-- ================= HERO SECTION ================= -->
   <main>
-
-    <section class="relative min-h-screen flex items-center pt-20 bg-charcoal overflow-hidden">
-
-      <!-- Background image placeholder -->
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+      <!-- Background work image with dark gradient overlay -->
       <div
-        class="absolute inset-0 bg-cover bg-center opacity-30"
-        style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80');"
+        class="absolute inset-0 bg-cover bg-center opacity-40 scale-105 animate-pulse duration-1000"
+        style="background-image: url('assets/Work_1.jpeg');"
+        onerror="this.style.backgroundImage='url(https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80)';"
       ></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/85 to-brandDark/60"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(200,169,126,0.15),transparent_50%)]"></div>
 
-      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30"></div>
-
-      <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full py-24">
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full">
         <div class="max-w-3xl">
 
-          <span class="inline-block mb-6 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/90 text-sm backdrop-blur">
-            Professional plastering & wall finishing
-          </span>
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sand/10 border border-sand/30 text-sand text-sm font-medium mb-8 backdrop-blur-sm">
+            <span class="w-2 h-2 rounded-full bg-sand animate-ping"></span>
+            Vakkundig Stucwerk & Afbouw
+          </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
-            Beautiful walls.
-            <span class="text-sand">Perfect finish.</span>
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-none">
+            Strakke muren. <br/>
+            <span class="gold-gradient-text">Perfecte afwerking.</span>
           </h1>
 
-          <p class="mt-6 text-lg sm:text-xl text-gray-200 leading-relaxed max-w-2xl">
-            Professional stuckwerk, decorative plastering and wall finishing
-            with attention to detail, clean workmanship and lasting results.
+          <p class="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed font-light max-w-2xl">
+            Specialist in hoogwaardig stucwerk, sierpleister en wandafwerking. 
+            Met oog voor detail, schone werkwijze en duurzaam resultaat voor uw woning of bedrijfspand.
           </p>
 
-          <div class="mt-9 flex flex-col sm:flex-row gap-4">
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
             <a
               href="#contact"
-              class="inline-flex items-center justify-center bg-sand text-white px-7 py-4 rounded-lg font-semibold hover:opacity-90 transition"
+              class="inline-flex items-center justify-center bg-sand text-brandDark px-8 py-4 rounded-xl font-bold hover:bg-sandLight transition shadow-xl shadow-sand/25 text-base"
             >
-              Request a Quote
+              Vrijblijvende Offerte
             </a>
 
             <a
               href="#gallery"
-              class="inline-flex items-center justify-center border border-white/40 text-white px-7 py-4 rounded-lg font-semibold hover:bg-white/10 transition"
+              class="inline-flex items-center justify-center border border-white/20 bg-white/5 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition text-base"
             >
-              View Our Work
+              Bekijk Ons Werk
             </a>
           </div>
 
-          <div class="mt-12 flex flex-wrap gap-x-8 gap-y-4 text-sm text-gray-200">
-            <div class="flex items-center gap-2">
-              <span class="text-sand">✓</span>
-              Professional workmanship
+          <!-- Trust Badges -->
+          <div class="mt-14 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-gray-300">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-sand/20 text-sand flex items-center justify-center font-bold">✓</div>
+              <span class="font-medium">Vakkundig Vakmanschap</span>
             </div>
-            <div class="flex items-center gap-2">
-              <span class="text-sand">✓</span>
-              Clean & precise
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-sand/20 text-sand flex items-center justify-center font-bold">✓</div>
+              <span class="font-medium">Schoon & Nauwkeurig</span>
             </div>
-            <div class="flex items-center gap-2">
-              <span class="text-sand">✓</span>
-              Free quotation
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-sand/20 text-sand flex items-center justify-center font-bold">✓</div>
+              <span class="font-medium">Gratis Offerte op Maat</span>
             </div>
           </div>
 
@@ -151,95 +181,75 @@
     </section>
 
 
-    <!-- ================= SERVICES ================= -->
-    <section id="services" class="py-24 bg-warm">
+    <!-- ================= SERVICES SECTION ================= -->
+    <section id="services" class="py-24 bg-brandCard/50 border-t border-b border-white/5 relative">
       <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
-        <div class="max-w-2xl mb-14">
+        <div class="max-w-2xl mb-16">
           <span class="text-sand font-semibold text-sm uppercase tracking-widest">
-            Our services
+            Onze Diensten
           </span>
-
-          <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-charcoal">
-            Quality finishes for every space
+          <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Kwaliteitsoppervlakken voor elke ruimte
           </h2>
-
-          <p class="mt-4 text-gray-600 text-lg">
-            From smooth modern walls to decorative finishes, we provide
-            professional solutions tailored to your home or business.
+          <p class="mt-4 text-gray-400 text-lg">
+            Van gladde moderne wanden tot karakteristieke sierpleisters, wij leveren professionele oplossingen op maat.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-3 gap-8">
 
           <!-- Service 1 -->
-          <article class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition">
-            <div class="w-14 h-14 rounded-xl bg-charcoal text-white flex items-center justify-center mb-7">
-              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                  d="M4 20h16M6 16l4-12h4l4 12M8 12h8"/>
+          <article class="bg-brandCard rounded-2xl p-8 border border-white/10 hover:border-sand/50 transition-all duration-300 group shadow-xl">
+            <div class="w-16 h-16 rounded-xl bg-sand/10 border border-sand/20 text-sand flex items-center justify-center mb-7 group-hover:bg-sand group-hover:text-brandDark transition-all duration-300">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 20h16M6 16l4-12h4l4 12M8 12h8"/>
               </svg>
             </div>
-
-            <h3 class="text-xl font-bold text-charcoal">
+            <h3 class="text-2xl font-bold text-white group-hover:text-sand transition">
               Stuckwerk
             </h3>
-
-            <p class="mt-4 text-gray-600 leading-relaxed">
-              Smooth and durable wall finishes for new builds, renovations
-              and complete interior transformations.
+            <p class="mt-4 text-gray-400 leading-relaxed text-sm sm:text-base">
+              Gladde en strakke wand- en plafondafwerkingen voor zowel nieuwbouw, renovaties als complete transformaties.
             </p>
-
-            <a href="#contact" class="inline-block mt-6 font-semibold text-charcoal hover:text-sand">
-              Ask about stuckwerk →
+            <a href="#contact" class="inline-flex items-center gap-2 mt-7 font-semibold text-sand hover:text-white transition text-sm">
+              Meer informatie <span>→</span>
             </a>
           </article>
-
 
           <!-- Service 2 -->
-          <article class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition">
-            <div class="w-14 h-14 rounded-xl bg-charcoal text-white flex items-center justify-center mb-7">
-              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                  d="M5 19c4-1 7-4 8-8l1-4 5-2-2 5-4 1c-1 4-4 7-8 8z"/>
+          <article class="bg-brandCard rounded-2xl p-8 border border-white/10 hover:border-sand/50 transition-all duration-300 group shadow-xl">
+            <div class="w-16 h-16 rounded-xl bg-sand/10 border border-sand/20 text-sand flex items-center justify-center mb-7 group-hover:bg-sand group-hover:text-brandDark transition-all duration-300">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 19c4-1 7-4 8-8l1-4 5-2-2 5-4 1c-1 4-4 7-8 8z"/>
               </svg>
             </div>
-
-            <h3 class="text-xl font-bold text-charcoal">
-              Decorative plastering
+            <h3 class="text-2xl font-bold text-white group-hover:text-sand transition">
+              Sierpleister & Afbouw
             </h3>
-
-            <p class="mt-4 text-gray-600 leading-relaxed">
-              Characterful decorative finishes that add texture, depth and
-              a distinctive look to your interior.
+            <p class="mt-4 text-gray-400 leading-relaxed text-sm sm:text-base">
+              Karakteristieke structuren en decoratieve wandtechnieken die sfeer, diepte en een unieke uitstraling geven.
             </p>
-
-            <a href="#contact" class="inline-block mt-6 font-semibold text-charcoal hover:text-sand">
-              Ask about decorative plastering →
+            <a href="#contact" class="inline-flex items-center gap-2 mt-7 font-semibold text-sand hover:text-white transition text-sm">
+              Meer informatie <span>→</span>
             </a>
           </article>
-
 
           <!-- Service 3 -->
-          <article class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition">
-            <div class="w-14 h-14 rounded-xl bg-charcoal text-white flex items-center justify-center mb-7">
-              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                  d="M4 17l4-4 3 3 5-7 4 4M4 20h16"/>
+          <article class="bg-brandCard rounded-2xl p-8 border border-white/10 hover:border-sand/50 transition-all duration-300 group shadow-xl">
+            <div class="w-16 h-16 rounded-xl bg-sand/10 border border-sand/20 text-sand flex items-center justify-center mb-7 group-hover:bg-sand group-hover:text-brandDark transition-all duration-300">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 17l4-4 3 3 5-7 4 4M4 20h16"/>
               </svg>
             </div>
-
-            <h3 class="text-xl font-bold text-charcoal">
-              Wall finishing
+            <h3 class="text-2xl font-bold text-white group-hover:text-sand transition">
+              Wandafwerking
             </h3>
-
-            <p class="mt-4 text-gray-600 leading-relaxed">
-              Detailed preparation and finishing to create clean, even walls
-              ready for painting, wallpaper or your chosen final finish.
+            <p class="mt-4 text-gray-400 leading-relaxed text-sm sm:text-base">
+              Grondige voorbereiding en perfecte eindafwerking voor schilderwerk, behang of sausklaar resultaat.
             </p>
-
-            <a href="#contact" class="inline-block mt-6 font-semibold text-charcoal hover:text-sand">
-              Ask about wall finishing →
+            <a href="#contact" class="inline-flex items-center gap-2 mt-7 font-semibold text-sand hover:text-white transition text-sm">
+              Meer informatie <span>→</span>
             </a>
           </article>
 
@@ -248,76 +258,59 @@
     </section>
 
 
-    <!-- ================= GALLERY ================= -->
-    <section id="gallery" class="py-24 bg-white">
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="py-24 bg-brandDark relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <div class="relative">
+            <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-brandCard">
+              <img 
+                src="assets/Work_2.jpeg" 
+                alt="Jowie Stuc en Afbouw project in uitvoering" 
+                class="w-full h-full object-cover hover:scale-105 transition duration-700"
+                onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80'"
+              />
+            </div>
+            <div class="absolute -bottom-6 -right-6 bg-brandCard border border-sand/30 p-6 rounded-2xl shadow-2xl hidden sm:block max-w-xs">
+              <div class="text-sand font-bold text-3xl mb-1">100%</div>
+              <div class="text-gray-300 text-sm">Vakkundige tevredenheid en oog voor elk detail.</div>
+            </div>
+          </div>
 
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
             <span class="text-sand font-semibold text-sm uppercase tracking-widest">
-              Recent work
+              Over Jowie Stuc en Afbouw
             </span>
-
-            <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-charcoal">
-              See the difference
+            <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Vakkundig stucwerk met passie voor het vak
             </h2>
-          </div>
+            <p class="mt-5 text-gray-300 leading-relaxed text-base sm:text-lg">
+              Bij **Jowie Stuc en Afbouw** draait alles om kwaliteit, betrouwbaarheid en precisie. Of het nu gaat om een complete woningrenovatie of een enkele wand, wij zorgen ervoor dat uw muren strakker dan ooit worden opgeleverd.
+            </p>
+            
+            <div class="mt-8 space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-6 h-6 rounded-full bg-sand/20 text-sand flex items-center justify-center shrink-0 mt-1">✓</div>
+                <div>
+                  <h4 class="font-bold text-white">Eerlijk advies</h4>
+                  <p class="text-sm text-gray-400 mt-0.5">Duidelijke communicatie vooraf en geen onverwachte kosten.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-6 h-6 rounded-full bg-sand/20 text-sand flex items-center justify-center shrink-0 mt-1">✓</div>
+                <div>
+                  <h4 class="font-bold text-white">Schone oplevering</h4>
+                  <p class="text-sm text-gray-400 mt-0.5">Wij werken uiterst nauwkeurig en ruimen alles netjes op na afloop.</p>
+                </div>
+              </div>
+            </div>
 
-          <p class="text-gray-600 max-w-md">
-            A selection of projects showcasing our attention to detail
-            and professional finishing.
-          </p>
-        </div>
-
-        <!-- Replace these placeholders with actual project photos -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-
-          <div class="group aspect-square bg-gray-200 rounded-2xl overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
-              alt="Modern finished interior"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-            />
-          </div>
-
-          <div class="group aspect-square bg-gray-200 rounded-2xl overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80"
-              alt="Finished wall interior"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-            />
-          </div>
-
-          <div class="group aspect-square bg-gray-200 rounded-2xl overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80"
-              alt="Interior wall finish"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-            />
-          </div>
-
-          <div class="group aspect-square bg-gray-200 rounded-2xl overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80"
-              alt="Contemporary interior"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-            />
-          </div>
-
-          <div class="group col-span-2 aspect-[2/1] bg-gray-200 rounded-2xl overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
-              alt="Home renovation project"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-            />
-          </div>
-
-          <div class="group col-span-2 aspect-[2/1] bg-gray-200 rounded-2xl overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80"
-              alt="Professional wall finishing"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-            />
+            <div class="mt-10">
+              <a href="#contact" class="inline-flex items-center gap-3 bg-sand text-brandDark px-7 py-3.5 rounded-xl font-bold hover:bg-sandLight transition shadow-lg">
+                Neem Contact Op
+              </a>
+            </div>
           </div>
 
         </div>
@@ -325,66 +318,150 @@
     </section>
 
 
-    <!-- ================= TESTIMONIALS ================= -->
-    <section id="reviews" class="py-24 bg-charcoal">
+    <!-- ================= GALLERY SECTION (Using assets) ================= -->
+    <section id="gallery" class="py-24 bg-brandCard/30 border-t border-b border-white/5">
       <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
-        <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+          <div>
+            <span class="text-sand font-semibold text-sm uppercase tracking-widest">
+              Recent Werk
+            </span>
+            <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Bekijk onze gerealiseerde projecten
+            </h2>
+          </div>
+          <p class="text-gray-400 max-w-md text-base">
+            Een selectie van ons stuc- en afbouwwerk uit de praktijk. Klik op een foto voor een vergrote weergave.
+          </p>
+        </div>
+
+        <!-- Gallery Grid utilizing assets/Work_1.jpeg through Work_8.jpeg -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Item 1 -->
+          <div class="group relative aspect-square bg-brandCard rounded-2xl overflow-hidden border border-white/10 shadow-lg cursor-pointer" onclick="openLightbox('assets/Work_1.jpeg', 'Stucwerk & Wandafwerking')">
+            <img src="assets/Work_1.jpeg" alt="Jowie Stucwerk Project 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+              <span class="text-white font-semibold text-sm">Project 01 — Stucwerk</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="group relative aspect-square bg-brandCard rounded-2xl overflow-hidden border border-white/10 shadow-lg cursor-pointer" onclick="openLightbox('assets/Work_2.jpeg', 'Sierpleister & Afbouw')">
+            <img src="assets/Work_2.jpeg" alt="Jowie Stucwerk Project 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+              <span class="text-white font-semibold text-sm">Project 02 — Wandafwerking</span>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="group relative aspect-square bg-brandCard rounded-2xl overflow-hidden border border-white/10 shadow-lg cursor-pointer" onclick="openLightbox('assets/Work_3.jpeg', 'Wandafwerking')">
+            <img src="assets/Work_3.jpeg" alt="Jowie Stucwerk Project 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+              <span class="text-white font-semibold text-sm">Project 03 — Interieur Stucwerk</span>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="group relative aspect-square bg-brandCard rounded-2xl overflow-hidden border border-white/10 shadow-lg cursor-pointer" onclick="openLightbox('assets/Work_4.jpeg', 'Stucwerk')">
+            <img src="assets/Work_4.jpeg" alt="Jowie Stucwerk Project 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+              <span class="text-white font-semibold text-sm">Project 04 — Glad Pleisterwerk</span>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="group relative aspect-square bg-brandCard rounded-2xl overflow-hidden border border-white/10 shadow-lg cursor-pointer" onclick="openLightbox('assets/Work_5.jpeg', 'Renovatie')">
+            <img src="assets/Work_5.jpeg" alt="Jowie Stucwerk Project 5" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+              <span class="text-white font-semibold text-sm">Project 05 — Renovatie</span>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="group relative aspect-square bg-brandCard rounded-2xl overflow-hidden border border-white/10 shadow-lg cursor-pointer" onclick="openLightbox('assets/Work_6.jpeg', 'Afbouw')">
+            <img src="assets/Work_6.jpeg" alt="Jowie Stucwerk Project 6" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+              <span class="text-white font-semibold text-sm">Project 06 — Afbouw & Wand</span>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="group relative aspect-square bg-brandCard rounded-2xl overflow-hidden border border-white/10 shadow-lg cursor-pointer" onclick="openLightbox('assets/Work_7.jpeg', 'Vakkundig Stucwerk')">
+            <img src="assets/Work_7.jpeg" alt="Jowie Stucwerk Project 7" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+              <span class="text-white font-semibold text-sm">Project 07 — Strakke Afwerking</span>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="group relative aspect-square bg-brandCard rounded-2xl overflow-hidden border border-white/10 shadow-lg cursor-pointer" onclick="openLightbox('assets/Work_8.jpeg', 'Sierpleister')">
+            <img src="assets/Work_8.jpeg" alt="Jowie Stucwerk Project 8" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+              <span class="text-white font-semibold text-sm">Project 08 — Sierpleister Detail</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= TESTIMONIALS SECTION ================= -->
+    <section id="reviews" class="py-24 bg-brandDark">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-2xl mx-auto mb-16">
           <span class="text-sand font-semibold text-sm uppercase tracking-widest">
-            Client reviews
+            Klantbeoordelingen
           </span>
-
-          <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-white">
-            Trusted by our customers
+          <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Wat onze klanten zeggen
           </h2>
-
           <p class="mt-4 text-gray-400">
-            Professional service, clear communication and attention to detail
-            from start to finish.
+            Ervaringen van huiseigenaren en bedrijven die kozen voor de kwaliteit van Jowie Stuc en Afbouw.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-3 gap-8">
 
-          <blockquote class="bg-white/5 border border-white/10 rounded-2xl p-7">
-            <div class="text-sand text-lg mb-5">★★★★★</div>
-
-            <p class="text-gray-200 leading-relaxed">
-              “Excellent work from beginning to end. The walls are beautifully
-              finished and the whole area was left very clean.”
-            </p>
-
-            <footer class="mt-7">
-              <div class="font-semibold text-white">Michael R.</div>
-              <div class="text-sm text-gray-400">Home renovation</div>
+          <blockquote class="bg-brandCard border border-white/10 rounded-2xl p-8 shadow-xl flex flex-col justify-between">
+            <div>
+              <div class="text-sand text-lg mb-4 flex gap-1">★★★★★</div>
+              <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                “Geweldig vakwerk geleverd! Onze muren zijn boterzacht en superstrak gestuct. Ook werd de hele werkruimte netjes en opgeruimd achtergelaten.”
+              </p>
+            </div>
+            <footer class="mt-8 pt-6 border-t border-white/5">
+              <div class="font-bold text-white">Michael R.</div>
+              <div class="text-xs text-sand">Woningrenovatie Almere</div>
             </footer>
           </blockquote>
 
-          <blockquote class="bg-white/5 border border-white/10 rounded-2xl p-7">
-            <div class="text-sand text-lg mb-5">★★★★★</div>
-
-            <p class="text-gray-200 leading-relaxed">
-              “Very professional and reliable. The decorative finish looks
-              fantastic and we received exactly what we discussed.”
-            </p>
-
-            <footer class="mt-7">
-              <div class="font-semibold text-white">Sophie V.</div>
-              <div class="text-sm text-gray-400">Interior project</div>
+          <blockquote class="bg-brandCard border border-white/10 rounded-2xl p-8 shadow-xl flex flex-col justify-between">
+            <div>
+              <div class="text-sand text-lg mb-4 flex gap-1">★★★★★</div>
+              <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                “Zeer betrouwbaar en professioneel. De afspraken werden perfect nagekomen en het sierpleisterwerk ziet er fantastisch uit.”
+              </p>
+            </div>
+            <footer class="mt-8 pt-6 border-t border-white/5">
+              <div class="font-bold text-white">Sophie V.</div>
+              <div class="text-xs text-sand">Interieurproject</div>
             </footer>
           </blockquote>
 
-          <blockquote class="bg-white/5 border border-white/10 rounded-2xl p-7">
-            <div class="text-sand text-lg mb-5">★★★★★</div>
-
-            <p class="text-gray-200 leading-relaxed">
-              “Clear communication, fair pricing and great attention to detail.
-              I would definitely contact them again for another project.”
-            </p>
-
-            <footer class="mt-7">
-              <div class="font-semibold text-white">Daniel K.</div>
-              <div class="text-sm text-gray-400">Wall finishing</div>
+          <blockquote class="bg-brandCard border border-white/10 rounded-2xl p-8 shadow-xl flex flex-col justify-between">
+            <div>
+              <div class="text-sand text-lg mb-4 flex gap-1">★★★★★</div>
+              <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                “Duidelijke communicatie vooraf, eerlijke prijs en een prachtig strak eindresultaat. Zeker een aanrader voor al je stucwerk!”
+              </p>
+            </div>
+            <footer class="mt-8 pt-6 border-t border-white/5">
+              <div class="font-bold text-white">Daniel K.</div>
+              <div class="text-xs text-sand">Wandafwerking</div>
             </footer>
           </blockquote>
 
@@ -393,211 +470,71 @@
     </section>
 
 
-    <!-- ================= CONTACT ================= -->
-    <section id="contact" class="py-24 bg-warm">
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="py-24 bg-brandCard/40 border-t border-white/5 relative">
       <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
-        <div class="grid lg:grid-cols-2 gap-14 lg:gap-24 items-start">
+        <div class="grid lg:grid-cols-1 gap-14 lg:gap-20 items-start">
 
           <div>
             <span class="text-sand font-semibold text-sm uppercase tracking-widest">
-              Get in touch
+              Neem contact op
             </span>
-
-            <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-charcoal">
-              Let's discuss your project
+            <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Klaar om uw project te bespreken?
             </h2>
-
-            <p class="mt-5 text-gray-600 text-lg leading-relaxed">
-              Looking for a reliable professional for your next plastering
-              or wall-finishing project? Contact us for more information
-              or a quotation.
+            <p class="mt-5 text-gray-400 text-base sm:text-lg leading-relaxed">
+              Heeft u vragen over stucwerk, sierpleister of wandafwerking, of wilt u direct een vrijblijvende offerte aanvragen? Neem gerust contact met ons op.
             </p>
 
             <div class="mt-10 space-y-6">
 
               <!-- Phone -->
-              <a href="tel:+31612345678" class="flex items-center gap-4 group">
-                <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center">
-                  <svg class="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-width="2"
-                      d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.52l.58 2.32a2 2 0 01-.57 1.9L8 10a16 16 0 006 6l1.26-1.23a2 2 0 011.9-.57l2.32.58A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/>
-                  </svg>
+              <a href="tel:+31682902107" class="flex items-center gap-5 group bg-brandCard p-4 rounded-2xl border border-white/10 hover:border-sand transition">
+                <div class="w-12 h-12 rounded-xl bg-sand/10 text-sand flex items-center justify-center font-bold">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.52l.58 2.32a2 2 0 01-.57 1.9L8 10a16 16 0 006 6l1.26-1.23a2 2 0 011.9-.57l2.32.58A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/></svg>
                 </div>
-
                 <div>
-                  <div class="text-sm text-gray-500">Phone</div>
-                  <div class="font-semibold text-charcoal group-hover:text-sand">
-                    +31 6 12 34 56 78
-                  </div>
+                  <div class="text-xs text-gray-400">Telefoon</div>
+                  <div class="font-bold text-white group-hover:text-sand transition">+31 6 12 34 56 78</div>
                 </div>
               </a>
-
 
               <!-- Email -->
-              <a href="mailto:info@example.nl" class="flex items-center gap-4 group">
-                <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center">
-                  <svg class="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-width="2"
-                      d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                  </svg>
+              <a href="mailto:namonamo80@hotmail.com" class="flex items-center gap-5 group bg-brandCard p-4 rounded-2xl border border-white/10 hover:border-sand transition">
+                <div class="w-12 h-12 rounded-xl bg-sand/10 text-sand flex items-center justify-center font-bold">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 </div>
-
                 <div>
-                  <div class="text-sm text-gray-500">Email</div>
-                  <div class="font-semibold text-charcoal group-hover:text-sand">
-                    info@example.nl
-                  </div>
+                  <div class="text-xs text-gray-400">E-mailadres</div>
+                  <div class="font-bold text-white group-hover:text-sand transition">namonamo80@hotmail.com</div>
                 </div>
               </a>
-
 
               <!-- WhatsApp -->
-              <a
-                href="https://wa.me/31612345678"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-4 group"
-              >
-                <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center">
-                  <svg class="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-width="1.8"
-                      d="M20 11.5a8 8 0 01-11.9 7L4 20l1.5-4A8 8 0 1120 11.5z"/>
-                    <path stroke="currentColor" stroke-width="1.8"
-                      d="M8.5 8.5c.3-.4.6-.4.9-.1l.8.9c.2.2.2.5 0 .8l-.4.5c.7 1.2 1.6 2.1 2.8 2.8l.5-.4c.3-.2.6-.2.8 0l.9.8c.3.3.3.6-.1.9-.5.5-1.1.7-1.7.5-2.7-.8-4.9-3-5.7-5.7-.2-.6 0-1.2.5-1.7z"/>
-                  </svg>
+              <a href="https://wa.me/31682902107" target="_blank" rel="noopener noreferrer" class="flex items-center gap-5 group bg-brandCard p-4 rounded-2xl border border-white/10 hover:border-sand transition">
+                <div class="w-12 h-12 rounded-xl bg-sand/10 text-sand flex items-center justify-center font-bold">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M20 11.5a8 8 0 01-11.9 7L4 20l1.5-4A8 8 0 1120 11.5z"/></svg>
                 </div>
-
                 <div>
-                  <div class="text-sm text-gray-500">WhatsApp</div>
-                  <div class="font-semibold text-charcoal group-hover:text-sand">
-                    Chat with us
-                  </div>
+                  <div class="text-xs text-gray-400">WhatsApp</div>
+                  <div class="font-bold text-white group-hover:text-sand transition">Stuur direct een bericht</div>
                 </div>
               </a>
 
-
-              <!-- Service area -->
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center">
-                  <svg class="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 21s7-5.4 7-12a7 7 0 10-14 0c0 6.6 7 12 7 12z"/>
-                    <circle cx="12" cy="9" r="2.5"/>
-                  </svg>
+              <!-- Service Area -->
+              <div class="flex items-center gap-5 bg-brandCard p-4 rounded-2xl border border-white/10">
+                <div class="w-12 h-12 rounded-xl bg-sand/10 text-sand flex items-center justify-center font-bold">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M12 21s7-5.4 7-12a7 7 0 10-14 0c0 6.6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
                 </div>
-
                 <div>
-                  <div class="text-sm text-gray-500">Service area</div>
-                  <div class="font-semibold text-charcoal">
-                    Hoofddorp & surrounding areas
-                  </div>
+                  <div class="text-xs text-gray-400">Werkgebied</div>
+                  <div class="font-bold text-white">Almere & omliggende regio</div>
                 </div>
               </div>
 
             </div>
           </div>
-
-
-          <!-- Contact card -->
-          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-7 sm:p-9">
-
-            <h3 class="text-2xl font-bold text-charcoal">
-              Request a quotation
-            </h3>
-
-            <p class="mt-2 text-gray-600">
-              Tell us a little about your project and we'll get back to you.
-            </p>
-
-            <form class="mt-7 space-y-5" action="#" method="POST">
-
-              <div>
-                <label for="name" class="block text-sm font-medium mb-2">
-                  Name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  placeholder="Your name"
-                  class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-sand/50 focus:border-sand"
-                />
-              </div>
-
-              <div>
-                <label for="phone" class="block text-sm font-medium mb-2">
-                  Phone
-                </label>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  placeholder="Your phone number"
-                  class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-sand/50 focus:border-sand"
-                />
-              </div>
-
-              <div>
-                <label for="email" class="block text-sm font-medium mb-2">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="you@example.com"
-                  class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-sand/50 focus:border-sand"
-                />
-              </div>
-
-              <div>
-                <label for="service" class="block text-sm font-medium mb-2">
-                  Service
-                </label>
-
-                <select
-                  id="service"
-                  name="service"
-                  class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-sand/50 focus:border-sand"
-                >
-                  <option>Stuckwerk</option>
-                  <option>Decorative plastering</option>
-                  <option>Wall finishing</option>
-                  <option>Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="message" class="block text-sm font-medium mb-2">
-                  Project details
-                </label>
-
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Tell us about your project..."
-                  class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-sand/50 focus:border-sand"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                class="w-full bg-charcoal text-white py-3.5 rounded-lg font-semibold hover:bg-gray-700 transition"
-              >
-                Send Request
-              </button>
-
-              <p class="text-xs text-gray-500 text-center">
-                We'll contact you as soon as possible.
-              </p>
-
-            </form>
-          </div>
-
         </div>
       </div>
     </section>
@@ -606,59 +543,71 @@
 
 
   <!-- ================= FOOTER ================= -->
-  <footer class="bg-gray-950 text-gray-400">
+  <footer class="bg-black text-gray-400 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
-      <div class="py-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-        <div>
-          <div class="text-white font-bold text-lg">
-            VAKMANSCHAP
+        <!-- Col 1 -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3.5 mb-4">
+            <div class="w-12 h-12 rounded-xl overflow-hidden border border-sand/30 bg-black flex items-center justify-center">
+              <img src="assets/logo.jpeg" alt="Jowie Stuc en Afbouw Logo" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/121212/c8a97e?text=JOWIE';" />
+            </div>
+            <div>
+              <div class="font-bold text-lg text-white tracking-wider">JOWIE</div>
+              <div class="text-[10px] text-sand font-medium tracking-widest uppercase">STUC EN AFBOUW</div>
+            </div>
           </div>
-
-          <p class="mt-3 text-sm leading-relaxed max-w-sm">
-            Professional stuckwerk, decorative plastering and wall finishing
-            for homes and businesses.
+          <p class="text-sm leading-relaxed max-w-sm text-gray-400">
+            Vakkundig stucwerk, sierpleister en wandafwerking voor al uw woningen en bedrijfspanden in Almere en omgeving.
           </p>
         </div>
 
+        <!-- Col 2 -->
         <div>
-          <h3 class="text-white font-semibold">
-            Services
-          </h3>
-
-          <ul class="mt-4 space-y-2 text-sm">
-            <li>Stuckwerk</li>
-            <li>Decorative plastering</li>
-            <li>Wall finishing</li>
+          <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Diensten</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#services" class="hover:text-sand transition">Stuckwerk</a></li>
+            <li><a href="#services" class="hover:text-sand transition">Sierpleister</a></li>
+            <li><a href="#services" class="hover:text-sand transition">Wandafwerking</a></li>
           </ul>
         </div>
 
+        <!-- Col 3 -->
         <div>
-          <h3 class="text-white font-semibold">
-            Contact
-          </h3>
-
-          <ul class="mt-4 space-y-2 text-sm">
+          <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h3>
+          <ul class="space-y-2.5 text-sm">
             <li>+31 6 12 34 56 78</li>
-            <li>info@example.nl</li>
-            <li>Hoofddorp & surrounding areas</li>
+            <li>namonamo80@hotmail.com</li>
+            <li>Almere & omstreken</li>
           </ul>
         </div>
 
       </div>
 
-      <div class="border-t border-white/10 py-6 flex flex-col sm:flex-row justify-between gap-3 text-xs">
-        <span>© 2026 Vakmanschap. All rights reserved.</span>
-        <span>Professional plastering & wall finishing</span>
+      <div class="border-t border-white/10 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+        <span>© 2026 Jowie Stuc en Afbouw. Alle rechten voorbehouden.</span>
+        <span>Vakkundig Stucwerk & Afbouw</span>
       </div>
 
     </div>
   </footer>
 
 
-  <!-- ================= JAVASCRIPT ================= -->
+  <!-- ================= LIGHTBOX MODAL ================= -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="relative max-w-4xl w-full bg-brandCard rounded-3xl overflow-hidden border border-white/20 p-2 shadow-2xl" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black transition">✕</button>
+      <img id="lightboxImg" src="" alt="Project vergroot" class="w-full max-h-[80vh] object-contain rounded-2xl" />
+      <div id="lightboxCaption" class="p-4 text-center font-bold text-white text-lg"></div>
+    </div>
+  </div>
+
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
   <script>
+    // Mobile menu toggle
     const menuButton = document.getElementById("menuButton");
     const mobileMenu = document.getElementById("mobileMenu");
 
@@ -671,6 +620,35 @@
         mobileMenu.classList.add("hidden");
       });
     });
+
+    // Lightbox functions
+    function openLightbox(src, caption) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightboxImg");
+      const lightboxCaption = document.getElementById("lightboxCaption");
+      
+      lightboxImg.src = src;
+      lightboxCaption.textContent = caption;
+      lightbox.classList.remove("hidden");
+      lightbox.classList.add("flex");
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById("lightbox");
+      lightbox.classList.add("hidden");
+      lightbox.classList.remove("flex");
+    }
+
+    // Form submission simulation
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const successMsg = document.getElementById("formSuccess");
+      successMsg.classList.remove("hidden");
+      document.getElementById("quoteForm").reset();
+      setTimeout(() => {
+        successMsg.classList.add("hidden");
+      }, 5000);
+    }
   </script>
 
 </body>
